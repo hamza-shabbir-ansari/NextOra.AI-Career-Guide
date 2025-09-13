@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+        <canvas id="particles"></canvas>
+        <div class="shape circle s1"></div>
+        <div class="shape diamond s2"></div>
+        <div class="shape circle s3"></div>
+        <div class="shape diamond s4"></div>
+        <div class="shape circle s5"></div>
+        <div class="shape diamond s6"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="navbar-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo">
+            </a>
+
+            <div class="navbar-menu">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('home') }}#about">About</a>
+                <a href="{{ url_for('journey_page') }}">Career Guide</a>
+                <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+                <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+            </div>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+            <div class="wrapper-menu" onclick="toggleMenu()">
+                <div class="line-menu half start"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu half end"></div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#about">About</a>
+            <a href="{{ url_for('journey_page') }}">Career Guide</a>
+            <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+            <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+        </div>
+    </header>
+
+
+
+    <section class="nextora-job-hero-section">
+        <div class="nextora-job-hero-content">
+            <h1 class="nextora-job-hero-heading"><span class="gradient-text">NextOra.AI Computer Vision Roadmap</span>
+            </h1>
+            <div class="nextora-job-hero-container">
+                <p class="nextora-job-hero-para">
+                    NextOra.AI presents a complete roadmap for mastering Computer Vision—from understanding image
+                    processing fundamentals to building AI systems that interpret visual data.
+                    Learn how to develop applications in object detection, facial recognition, and autonomous systems
+                    with cutting-edge techniques.
+                    Start your journey with NextOra.AI and become a leader in the world of intelligent vision
+                    technology. 🖼️
+                </p>
+            </div>
+
+        </div>
+    </section>
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='computer-vision-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='computer-vision-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='computer-vision-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+
+    <section class="comve-roadmap-section">
+        <h2 class="comve-roadmap-main-heading">Computer Vision Engineering Roadmap</h2>
+        <div class="comve-roadmap-container">
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">Programming Fundamentals</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">Python</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">C++ (Optional)</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">NumPy, Pandas</div>
+                </div>
+            </div>
+
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">Mathematics & Core Concepts</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">Linear Algebra</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Probability & Statistics</div>
+                </div>
+            </div>
+
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">Image Processing Basics</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">Filtering & Convolutions</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Edge Detection</div>
+                </div>
+            </div>
+
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">Computer Vision Libraries</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">OpenCV</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Pillow / Scikit-Image</div>
+                </div>
+            </div>
+
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">ML for Vision</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">Classical ML (SVM, KNN)</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Feature Extraction</div>
+                </div>
+            </div>
+
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">Deep Learning Foundations</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">Neural Networks</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">CNNs</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Transfer Learning</div>
+                </div>
+            </div>
+
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">Advanced Architectures</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">ResNet / VGG</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">YOLO / Faster R-CNN</div>
+                </div>
+            </div>
+
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">Specialized Topics</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">Object Detection</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Image Segmentation</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Face Recognition / OCR</div>
+                </div>
+            </div>
+
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">Generative Models</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">GANs</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Diffusion Models</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Vision Transformers (ViT)</div>
+                </div>
+            </div>
+
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">Datasets & Benchmarks</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">ImageNet, COCO</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Custom Dataset Preparation</div>
+                </div>
+            </div>
+
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">Deployment & Integration</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">Model Serving</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Edge Deployment</div>
+                </div>
+            </div>
+
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">Tools & Frameworks</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">TensorFlow / Keras</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">PyTorch</div>
+                </div>
+            </div>
+
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">Applications</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">Autonomous Vehicles</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Medical Imaging</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Robotics Vision</div>
+                </div>
+            </div>
+
+            <div class="comve-roadmap-path">
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-step">
+                    <div class="comve-roadmap-node">Responsible CV</div>
+                </div>
+                <div class="comve-roadmap-line-vertical"></div>
+                <div class="comve-roadmap-split-items">
+                    <div class="comve-roadmap-node">Bias & Fairness</div>
+                    <div class="comve-roadmap-line-horizontal"></div>
+                    <div class="comve-roadmap-node">Privacy & Ethics</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="nextora-footer">
+        <div class="footer-container">
+
+            <div class="footer-col footer-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif"
+                            alt="icon1"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif"
+                            alt="icon2"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif"
+                            alt="icon3"></a>
+                    <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif"
+                            alt="icon4"></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Pages</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#service">Services</a></li>
+                    <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Explore</h3>
+                <ul>
+                    <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+                    <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+                    <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Get in Touch</h3>
+                <ul>
+                    <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+                    <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+                    <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza
+                    Ansari</span></p>
+        </div>
+    </footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

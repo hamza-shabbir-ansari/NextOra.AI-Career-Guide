@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+        <canvas id="particles"></canvas>
+        <div class="shape circle s1"></div>
+        <div class="shape diamond s2"></div>
+        <div class="shape circle s3"></div>
+        <div class="shape diamond s4"></div>
+        <div class="shape circle s5"></div>
+        <div class="shape diamond s6"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="navbar-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo">
+            </a>
+
+            <div class="navbar-menu">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('home') }}#about">About</a>
+                <a href="{{ url_for('journey_page') }}">Career Guide</a>
+                <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+                <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+            </div>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+            <div class="wrapper-menu" onclick="toggleMenu()">
+                <div class="line-menu half start"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu half end"></div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#about">About</a>
+            <a href="{{ url_for('journey_page') }}">Career Guide</a>
+            <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+            <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+        </div>
+    </header>
+
+
+
+    <section class="nextora-job-hero-section">
+        <div class="nextora-job-hero-content">
+            <h1 class="nextora-job-hero-heading"><span class="gradient-text">SEO Specialist Projects</span></h1>
+            <div class="nextora-job-hero-container">
+                <p class="nextora-job-hero-para">At Nextora.AI, master the art of driving organic traffic by optimizing
+                    websites, researching keywords, and improving rankings. Build real-world skills to make brands
+                    visible online. 🔍🚀</p>
+            </div>
+
+
+        </div>
+    </section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='seo-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='seo-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='seo-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+    <section class="seospe-project-section">
+        <h2 class="seospe-project-heading">SEO Specialist Project Ideas</h2>
+        <div class="seospe-project-container">
+
+            <!-- Beginner Level Project -->
+            <div class="seospe-project-card">
+                <h3 class="seospe-project-title">1. Beginner Level – On-Page SEO Optimization for a Blog</h3>
+                <p class="seospe-project-description">Optimize an existing blog or website for search engines using
+                    basic on-page SEO techniques.</p>
+                <div class="seospe-project-tech-stack">
+                    <h4>Tech Stack:</h4>
+                    <p>Google Keyword Planner, Ubersuggest, Yoast SEO (WordPress), Google Search Console.</p>
+                </div>
+                <div class="seospe-project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Keyword research and placement</li>
+                        <li>Optimized meta titles and descriptions</li>
+                        <li>Internal linking for better navigation</li>
+                        <li>Image optimization with alt tags</li>
+                        <li>Beginner-friendly approach to SEO fundamentals</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Intermediate Level Project -->
+            <div class="seospe-project-card">
+                <h3 class="seospe-project-title">2. Intermediate Level – Technical SEO Audit and Website Performance
+                    Improvement</h3>
+                <p class="seospe-project-description">Conduct a technical SEO audit of a website and implement solutions
+                    for better performance.</p>
+                <div class="seospe-project-tech-stack">
+                    <h4>Tech Stack:</h4>
+                    <p>Screaming Frog SEO Spider, Google PageSpeed Insights, GTmetrix, Ahrefs/SEMrush, Schema Markup
+                        tools.</p>
+                </div>
+                <div class="seospe-project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Site crawl analysis and error detection</li>
+                        <li>Fixing broken links and redirect issues</li>
+                        <li>Mobile-first and responsive optimization</li>
+                        <li>Improving site speed and Core Web Vitals</li>
+                        <li>Adding structured data and schema markup</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Advanced Level Project -->
+            <div class="seospe-project-card">
+                <h3 class="seospe-project-title">3. Advanced Level – Full SEO Strategy with Analytics and Link Building
+                </h3>
+                <p class="seospe-project-description">Develop and execute a full SEO strategy for a business website,
+                    including on-page, off-page, and technical SEO.</p>
+                <div class="seospe-project-tech-stack">
+                    <h4>Tech Stack:</h4>
+                    <p>Ahrefs, SEMrush, Moz Pro, Google Analytics, Google Tag Manager, Content Marketing Tools.</p>
+                </div>
+                <div class="seospe-project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Competitor keyword gap analysis</li>
+                        <li>High-quality backlink building campaigns</li>
+                        <li>Content strategy for long-tail keywords</li>
+                        <li>Advanced analytics and conversion tracking</li>
+                        <li>Continuous performance monitoring with KPIs</li>
+                        <li>Scalable for e-commerce or large websites</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="nextora-footer">
+        <div class="footer-container">
+
+            <div class="footer-col footer-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif"
+                            alt="icon1"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif"
+                            alt="icon2"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif"
+                            alt="icon3"></a>
+                    <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif"
+                            alt="icon4"></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Pages</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#service">Services</a></li>
+                    <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Explore</h3>
+                <ul>
+                    <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+                    <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+                    <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Get in Touch</h3>
+                <ul>
+                    <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+                    <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+                    <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza
+                    Ansari</span></p>
+        </div>
+    </footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

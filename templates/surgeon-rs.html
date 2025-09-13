@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+    <canvas id="particles"></canvas>
+    <div class="shape circle s1"></div>
+    <div class="shape diamond s2"></div>
+    <div class="shape circle s3"></div>
+    <div class="shape diamond s4"></div>
+    <div class="shape circle s5"></div>
+    <div class="shape diamond s6"></div>
+  </div>
+
+<header>
+  <nav class="navbar">
+    <a href="{{ url_for('home') }}" class="navbar-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo">
+    </a>
+
+    <div class="navbar-menu">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('home') }}#about">About</a>
+      <a href="{{ url_for('journey_page') }}">Career Guide</a>
+      <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+      <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+    </div>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+    <div class="wrapper-menu" onclick="toggleMenu()">
+      <div class="line-menu half start"></div>
+      <div class="line-menu"></div>
+      <div class="line-menu half end"></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('home') }}#about">About</a>
+    <a href="{{ url_for('journey_page') }}">Career Guide</a>
+    <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+    <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+  </div>
+</header>
+
+
+
+<section class="nextora-job-hero-section">
+    <div class="nextora-job-hero-content">
+        <h1 class="nextora-job-hero-heading"><span class="gradient-text">Surgeon Resources</span></h1>
+        <div class="nextora-job-hero-container">
+            <p class="nextora-job-hero-para">A surgeon is a highly skilled medical professional dedicated to performing surgical procedures to treat injuries, diseases, and deformities. Using advanced techniques and precision, surgeons play a vital role in saving lives, restoring health, and improving the quality of life for their patients. From routine operations to complex surgeries, they work with care, expertise, and dedication to ensure the best possible outcomes for every patient.</p>
+        </div>
+    </div>
+</section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='surgeon-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='surgeon-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='surgeon-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+
+<!-- YouTube Resources Section -->
+<section class="resource-yt-section">
+  <h2 class="resource-yt-heading">YouTube Videos</h2>
+  <div class="resource-yt-grid">
+    <!-- Card 1 -->
+    <div class="resource-yt-card">
+      <iframe src="https://www.youtube.com/embed/vREihxXcR8g?si=1vBN1-ldtAXfZ8cc" title="Video 1" frameborder="0" allowfullscreen></iframe>
+      <h3 class="resource-yt-title">Exploring the Path to Becoming a Surgeon</h3>
+      <p class="resource-yt-desc">This video provides insights into the journey of becoming a surgeon, including the necessary education, training, and the various specialties within the field.</p>
+      <a href="https://www.youtube.com/embed/vREihxXcR8g?si=1vBN1-ldtAXfZ8cc" target="_blank" class="resource-yt-btn">Watch Now</a>
+    </div>
+    <!-- Card 2 -->
+    <div class="resource-yt-card">
+      <iframe src="https://www.youtube.com/embed/mvT0i3IgXbg?si=hkHN38eeThzkeXRN" title="Video 2" frameborder="0" allowfullscreen></iframe>
+      <h3 class="resource-yt-title">A Quick Glimpse into a Surgeon’s Daily Routine</h3>
+      <p class="resource-yt-desc">Dr. Webb offers a brief overview of a typical day as an orthopedic surgeon, highlighting key responsibilities and challenges faced in the profession.</p>
+      <a href="https://www.youtube.com/embed/mvT0i3IgXbg?si=hkHN38eeThzkeXRN" target="_blank" class="resource-yt-btn">Watch Now</a>
+    </div>
+    <!-- Card 3 -->
+    <div class="resource-yt-card">
+      <iframe src="https://www.youtube.com/embed/fVI-mLuEvsI?si=g0_m45ZsSArGMbf8" title="Video 3" frameborder="0" allowfullscreen></iframe>
+      <h3 class="resource-yt-title">Personal Journey into the Surgical Profession</h3>
+      <p class="resource-yt-desc">Dr. Webb shares his personal experiences and the steps he took to become a surgeon, providing valuable insights for aspiring medical professionals.</p>
+      <a href="https://www.youtube.com/embed/fVI-mLuEvsI?si=g0_m45ZsSArGMbf8" target="_blank" class="resource-yt-btn">Watch Now</a>
+    </div>
+    <!-- Card 4 -->
+    <div class="resource-yt-card">
+      <iframe src="https://www.youtube.com/embed/CDxeswbKcoc?si=7YAMByu0v15iV0di" title="Video 4" frameborder="0" allowfullscreen></iframe>
+      <h3 class="resource-yt-title">Passion and Rewards in the Surgical Field</h3>
+      <p class="resource-yt-desc">Surgeons from various specialties discuss their love for the profession, emphasizing the fulfillment and impact of their work on patients' lives.</p>
+      <a href="https://www.youtube.com/embed/CDxeswbKcoc?si=7YAMByu0v15iV0di" target="_blank" class="resource-yt-btn">Watch Now</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Document Resources Section -->
+<section class="resources-doc-section">
+  <h2 class="resources-doc-heading">Document Resources</h2>
+  <div class="resources-doc-grid">
+    <!-- Card 1 -->
+    <div class="resources-doc-card">
+      <div class="doc-card-overlay"></div>
+      <h3 class="doc-card-title">Comprehensive Guide to General Surgery</h3>
+      <p class="doc-card-desc">
+        An in-depth resource detailing the training, responsibilities, and common procedures performed by general surgeons.
+      </p>
+      <a href="https://my.clevelandclinic.org/health/articles/general-surgeon?utm_source=chatgpt.com" class="doc-card-btn" target="_blank">Explore Now</a>
+    </div>
+    <!-- Card 2 -->
+    <div class="resources-doc-card">
+      <div class="doc-card-overlay"></div>
+      <h3 class="doc-card-title">Career Outlook and Employment Information</h3>
+      <p class="doc-card-desc">
+        Provides data on job outlook, salary, and educational requirements for physicians and surgeons.
+      </p>
+      <a href="https://www.bls.gov/ooh/healthcare/physicians-and-surgeons.htm?utm_source=chatgpt.com" class="doc-card-btn" target="_blank">Explore Now</a>
+    </div>
+    <!-- Card 3 -->
+    <div class="resources-doc-card">
+      <div class="doc-card-overlay"></div>
+      <h3 class="doc-card-title">Historical and Ethical Perspectives on Surgery</h3>
+      <p class="doc-card-desc">
+        Discusses the evolution of surgery as a profession and the ethical considerations involved in surgical practice
+      </p>
+      <a href="https://amj.amegroups.org/article/view/4738/html?utm_source=chatgpt.com" class="doc-card-btn" target="_blank">Explore Now</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="nextora-footer">
+  <div class="footer-container">
+
+    <div class="footer-col footer-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif" alt="icon1"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif" alt="icon2"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif" alt="icon3"></a>
+        <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif" alt="icon4"></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Pages</h3>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('home') }}#about">About</a></li>
+        <li><a href="{{ url_for('home') }}#service">Services</a></li>
+        <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Explore</h3>
+      <ul>
+        <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+        <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+        <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Get in Touch</h3>
+      <ul>
+        <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+        <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+        <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza Ansari</span></p>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

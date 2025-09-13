@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+        <canvas id="particles"></canvas>
+        <div class="shape circle s1"></div>
+        <div class="shape diamond s2"></div>
+        <div class="shape circle s3"></div>
+        <div class="shape diamond s4"></div>
+        <div class="shape circle s5"></div>
+        <div class="shape diamond s6"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="navbar-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo">
+            </a>
+
+            <div class="navbar-menu">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('home') }}#about">About</a>
+                <a href="{{ url_for('journey_page') }}">Career Guide</a>
+                <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+                <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+            </div>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+            <div class="wrapper-menu" onclick="toggleMenu()">
+                <div class="line-menu half start"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu half end"></div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#about">About</a>
+            <a href="{{ url_for('journey_page') }}">Career Guide</a>
+            <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+            <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+        </div>
+    </header>
+
+
+
+    <section class="nextora-job-hero-section">
+        <div class="nextora-job-hero-content">
+            <h1 class="nextora-job-hero-heading"><span class="gradient-text">NextOra.AI Dentist Roadmap</span></h1>
+            <div class="nextora-job-hero-container">
+                <p class="nextora-job-hero-para">
+                    NextOra.AI offers a structured roadmap to becoming a Dentist—from mastering dental fundamentals to
+                    specializing in advanced oral care.
+                    Explore the path of education, clinical practice, and patient-focused expertise that shapes a
+                    successful dental career.
+                    Begin your journey with NextOra.AI and make a lasting impact in oral health. 🦷
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='dentist-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='dentist-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='dentist-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+<section class="dentist-project-section">
+    <h2 class="dentist-project-heading">Dentist Practice Ideas</h2>
+    <div class="dentist-project-container">
+        
+        <!-- Beginner Level Project -->
+        <div class="dentist-project-card">
+            <h3 class="dentist-project-title">1. Beginner Level – Basic Dental Skills and Simulation Practice</h3>
+            <p class="dentist-project-description">This stage focuses on developing fundamental dentistry skills through models and simulators. Learners gain confidence in handling dental instruments, learning oral anatomy, and performing basic procedures.</p>
+            <div class="dentist-project-tech-stack">
+                <h4>Practice Stack:</h4>
+                <p>Dental mannequins, Phantom heads, Basic dental instruments, Simulation labs, Dental textbooks.</p>
+            </div>
+            <div class="dentist-project-features">
+                <h4>Key Features:</h4>
+                <ul>
+                    <li>Practicing cavity preparation on simulation models</li>
+                    <li>Learning tooth anatomy and morphology</li>
+                    <li>Handling basic dental tools safely</li>
+                    <li>Practicing sterilization and infection control techniques</li>
+                    <li>Developing hand–eye coordination for precision tasks</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Intermediate Level Project -->
+        <div class="dentist-project-card">
+            <h3 class="dentist-project-title">2. Intermediate Level – Clinical Observation and Patient Interaction</h3>
+            <p class="dentist-project-description">At this level, learners start assisting dentists in real clinics, observing live dental procedures, and practicing under supervision. This stage emphasizes communication, patient care, and controlled clinical skills.</p>
+            <div class="dentist-project-tech-stack">
+                <h4>Practice Stack:</h4>
+                <p>Dental chairs, Diagnostic tools (X-ray, intraoral camera), Clinical instruments, Mentorship in dental clinics.</p>
+            </div>
+            <div class="dentist-project-features">
+                <h4>Key Features:</h4>
+                <ul>
+                    <li>Assisting dentists during real patient treatments</li>
+                    <li>Practicing scaling and polishing under supervision</li>
+                    <li>Conducting oral examinations and documenting patient history</li>
+                    <li>Learning radiographic interpretation basics</li>
+                    <li>Building patient interaction and communication confidence</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Advanced Level Project -->
+        <div class="dentist-project-card">
+            <h3 class="dentist-project-title">3. Advanced Level – Independent Dental Procedures and Specialized Practice</h3>
+            <p class="dentist-project-description">This stage prepares learners to perform independent treatments and develop expertise in specialized fields such as orthodontics, endodontics, prosthodontics, or oral surgery. The focus is on decision-making, accuracy, and leadership in dental practice.</p>
+            <div class="dentist-project-tech-stack">
+                <h4>Practice Stack:</h4>
+                <p>Advanced dental units, Specialized tools (endodontic files, orthodontic appliances, surgical kits), Patient management software, Research journals.</p>
+            </div>
+            <div class="dentist-project-features">
+                <h4>Key Features:</h4>
+                <ul>
+                    <li>Performing fillings, root canals, and extractions independently</li>
+                    <li>Managing complex cases under supervision of senior dentists</li>
+                    <li>Specialization practices (braces, implants, prosthetics)</li>
+                    <li>Developing treatment plans and patient counseling skills</li>
+                    <li>Practicing advanced infection control and safety protocols</li>
+                    <li>Contributing to dental research and case studies</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <footer class="nextora-footer">
+        <div class="footer-container">
+
+            <div class="footer-col footer-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif"
+                            alt="icon1"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif"
+                            alt="icon2"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif"
+                            alt="icon3"></a>
+                    <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif"
+                            alt="icon4"></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Pages</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#service">Services</a></li>
+                    <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Explore</h3>
+                <ul>
+                    <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+                    <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+                    <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Get in Touch</h3>
+                <ul>
+                    <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+                    <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+                    <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza
+                    Ansari</span></p>
+        </div>
+    </footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+        <canvas id="particles"></canvas>
+        <div class="shape circle s1"></div>
+        <div class="shape diamond s2"></div>
+        <div class="shape circle s3"></div>
+        <div class="shape diamond s4"></div>
+        <div class="shape circle s5"></div>
+        <div class="shape diamond s6"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="navbar-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo">
+            </a>
+
+            <div class="navbar-menu">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('home') }}#about">About</a>
+                <a href="{{ url_for('journey_page') }}">Career Guide</a>
+                <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+                <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+            </div>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+            <div class="wrapper-menu" onclick="toggleMenu()">
+                <div class="line-menu half start"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu half end"></div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#about">About</a>
+            <a href="{{ url_for('journey_page') }}">Career Guide</a>
+            <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+            <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+        </div>
+    </header>
+
+
+
+    <section class="nextora-job-hero-section">
+        <div class="nextora-job-hero-content">
+            <h1 class="nextora-job-hero-heading"><span class="gradient-text">UI/UX Designer</span></h1>
+            <div class="nextora-job-hero-container">
+                <p class="nextora-job-hero-para"> As a UI/UX Designer, you craft intuitive and engaging digital
+                    experiences that users love. By understanding user behavior, designing seamless interfaces, and
+                    creating visually appealing layouts, you bridge the gap between functionality and creativity.
+                    Mastering UI/UX skills allows you to improve usability, enhance user satisfaction, and build
+                    products that make a real impact in the digital world.</p>
+            </div>
+        </div>
+    </section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='ui-ux-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='ui-ux-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='ui-ux-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+
+    <!-- YouTube Resources Section -->
+    <section class="resource-yt-section">
+        <h2 class="resource-yt-heading">YouTube Videos</h2>
+        <div class="resource-yt-grid">
+            <!-- Card 1 -->
+            <div class="resource-yt-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/O5IXf8qB9U4?si=aCePQ0bIsfFIWIOC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3 class="resource-yt-title">UI/UX Design Full Course for Beginners 2025 | Lets Uncover</h3>
+                <p class="resource-yt-desc">This comprehensive course covers the fundamentals of UI/UX design, including
+                    user research, wireframing, prototyping, and usability testing. It's perfect for beginners looking
+                    to build a strong foundation in design principles.</p>
+                <a href="https://www.youtube.com/embed/O5IXf8qB9U4?si=aCePQ0bIsfFIWIOC" target="_blank" class="resource-yt-btn">Watch Now</a>
+            </div>
+            <!-- Card 2 -->
+            <div class="resource-yt-card">
+                <iframe src="https://www.youtube.com/embed/truRwcI7-kg?si=GfEBfMpvefjStY3J" title="Video 2"
+                    frameborder="0" allowfullscreen></iframe>
+                <h3 class="resource-yt-title">How To Become A UI/UX Designer In 2025 Without A Degree</h3>
+                <p class="resource-yt-desc">This video provides a step-by-step guide on how to break into the UI/UX
+                    design field without a formal degree, focusing on building a portfolio, gaining practical
+                    experience, and leveraging online resources.</p>
+                <a href="https://www.youtube.com/embed/truRwcI7-kg?si=GfEBfMpvefjStY3J" target="_blank" class="resource-yt-btn">Watch Now</a>
+            </div>
+            <!-- Card 3 -->
+            <div class="resource-yt-card">
+                <iframe src="https://www.youtube.com/embed/Q324oRLYhlM?si=boCZ0ILr3PLyNHBK" title="Video 3"
+                    frameborder="0" allowfullscreen></iframe>
+                <h3 class="resource-yt-title">Complete Guide to UI/UX (2024)</h3>
+                <p class="resource-yt-desc">A thorough walkthrough of the UI/UX design process, from understanding user
+                    needs to creating intuitive interfaces. This guide is ideal for those seeking a structured approach
+                    to design.</p>
+                <a href="https://www.youtube.com/embed/Q324oRLYhlM?si=boCZ0ILr3PLyNHBK" target="_blank" class="resource-yt-btn">Watch Now</a>
+            </div>
+            <!-- Card 4 -->
+            <div class="resource-yt-card">
+                <iframe src="https://www.youtube.com/embed/P5epIoOJnzU?si=BgSoi2Umo9Tgt8hI" title="Video 4"
+                    frameborder="0" allowfullscreen></iframe>
+                <h3 class="resource-yt-title">Figma UI Design Course: A Beginners Tutorial</h3>
+                <p class="resource-yt-desc">Learn how to use Figma, a popular design tool, to create user interfaces.
+                    This tutorial covers the basics of Figma, including frames, components, and prototyping, tailored
+                    for beginners.</p>
+                <a href="https://www.youtube.com/embed/P5epIoOJnzU?si=BgSoi2Umo9Tgt8hI" target="_blank" class="resource-yt-btn">Watch Now</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Document Resources Section -->
+    <section class="resources-doc-section">
+        <h2 class="resources-doc-heading">Document Resources</h2>
+        <div class="resources-doc-grid">
+            <!-- Card 1 -->
+            <div class="resources-doc-card">
+                <div class="doc-card-overlay"></div>
+                <h3 class="doc-card-title">UI/UX Design Cheat Sheet</h3>
+                <p class="doc-card-desc">
+                    This quick-reference guide provides essential principles and guidelines for UI/UX design, covering
+                    topics such as user-centered design, usability heuristics, and visual design fundamentals. It's an
+                    excellent resource for both beginners and seasoned designers seeking to reinforce their knowledge.
+                </p>
+                <a href="https://zerotomastery.io/cheatsheets/ui-ux-design-cheat-sheet/" class="doc-card-btn"
+                    target="_blank">Explore Now</a>
+            </div>
+            <!-- Card 2 -->
+            <div class="resources-doc-card">
+                <div class="doc-card-overlay"></div>
+                <h3 class="doc-card-title">User Interface Design Guidelines</h3>
+                <p class="doc-card-desc">
+                    Developed by the MOSIP initiative, this comprehensive document offers inclusive UI design guidelines
+                    aimed at creating user-centric and visually appealing applications. It emphasizes usability,
+                    inclusivity, and consistency, making it a valuable resource for developers and designers working on
+                    public sector applications.
+                </p>
+                <a href="https://www.mosip.io/program_partner/User-Interface-Design-Guidelines.pdf" class="doc-card-btn"
+                    target="_blank">Explore Now</a>
+            </div>
+            <!-- Card 3 -->
+            <div class="resources-doc-card">
+                <div class="doc-card-overlay"></div>
+                <h3 class="doc-card-title">Introduction to UI/UX Design: Key Concepts and Principles</h3>
+                <p class="doc-card-desc">
+                    This article provides an overview of the key concepts and principles of UI/UX design, including
+                    user-centered design, usability, visual design, accessibility, consistency, feedback, prototyping,
+                    and continuous improvement. It's a concise resource for those looking to understand the foundational
+                    elements of effective digital product design
+                </p>
+                <a href="https://www.academia.edu/98036432/Introduction_to_UI_UX_Design_Key_Concepts_and_Principles" class="doc-card-btn" target="_blank">Explore Now</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="nextora-footer">
+        <div class="footer-container">
+
+            <div class="footer-col footer-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif"
+                            alt="icon1"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif"
+                            alt="icon2"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif"
+                            alt="icon3"></a>
+                    <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif"
+                            alt="icon4"></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Pages</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#service">Services</a></li>
+                    <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Explore</h3>
+                <ul>
+                    <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+                    <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+                    <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Get in Touch</h3>
+                <ul>
+                    <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+                    <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+                    <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza
+                    Ansari</span></p>
+        </div>
+    </footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

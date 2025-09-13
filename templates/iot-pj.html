@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+        <canvas id="particles"></canvas>
+        <div class="shape circle s1"></div>
+        <div class="shape diamond s2"></div>
+        <div class="shape circle s3"></div>
+        <div class="shape diamond s4"></div>
+        <div class="shape circle s5"></div>
+        <div class="shape diamond s6"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="navbar-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo">
+            </a>
+
+            <div class="navbar-menu">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('home') }}#about">About</a>
+                <a href="{{ url_for('journey_page') }}">Career Guide</a>
+                <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+                <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+            </div>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+            <div class="wrapper-menu" onclick="toggleMenu()">
+                <div class="line-menu half start"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu half end"></div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#about">About</a>
+            <a href="{{ url_for('journey_page') }}">Career Guide</a>
+            <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+            <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+        </div>
+    </header>
+
+
+
+    <section class="nextora-job-hero-section">
+        <div class="nextora-job-hero-content">
+            <h1 class="nextora-job-hero-heading"><span class="gradient-text">IoT Projects</span></h1>
+            <div class="nextora-job-hero-container">
+                <p class="nextora-job-hero-para">At Nextora.AI, we bring IoT to life with hands-on projects that connect
+                    devices, data, and intelligence. From smart homes to industry solutions, our roadmap prepares you
+                    for the future of connected technology. 🚀</p>
+            </div>
+
+
+        </div>
+    </section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='iot-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='iot-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='iot-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+
+    <section class="ioteng-project-section">
+        <h2 class="ioteng-project-heading">IoT (Internet of Things) Project Ideas</h2>
+        <div class="ioteng-project-container">
+
+            <!-- Beginner Level Project -->
+            <div class="ioteng-project-card">
+                <h3 class="ioteng-project-title">1. Beginner Level – Smart Home Temperature Monitor</h3>
+                <p class="ioteng-project-description">A simple IoT system to measure and display room temperature and
+                    humidity using sensors.</p>
+                <div class="ioteng-project-tech-stack">
+                    <h4>Tech Stack:</h4>
+                    <p>Arduino/ESP32, DHT11/DHT22 sensor, LCD/LED display, Arduino IDE.</p>
+                </div>
+                <div class="ioteng-project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Collect real-time temperature and humidity data</li>
+                        <li>Display readings on an LCD screen</li>
+                        <li>Basic alert system for high/low temperature</li>
+                        <li>USB or Wi-Fi based data transfer</li>
+                        <li>Beginner-friendly hardware and coding setup</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Intermediate Level Project -->
+            <div class="ioteng-project-card">
+                <h3 class="ioteng-project-title">2. Intermediate Level – IoT-Based Smart Agriculture System</h3>
+                <p class="ioteng-project-description">A system that monitors soil moisture, temperature, and humidity,
+                    and automates irrigation.</p>
+                <div class="ioteng-project-tech-stack">
+                    <h4>Tech Stack:</h4>
+                    <p>Raspberry Pi/ESP32, Soil Moisture Sensor, DHT22, Relay Module, Cloud Platform
+                        (ThingSpeak/Firebase).</p>
+                </div>
+                <div class="ioteng-project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Collect environmental and soil data</li>
+                        <li>Automatic water pump control using moisture levels</li>
+                        <li>Remote monitoring through mobile/web dashboard</li>
+                        <li>Cloud integration for data logging and visualization</li>
+                        <li>Alert notifications for abnormal conditions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Advanced Level Project -->
+            <div class="ioteng-project-card">
+                <h3 class="ioteng-project-title">3. Advanced Level – Smart City Traffic Management System</h3>
+                <p class="ioteng-project-description">An IoT-based solution to monitor and manage city traffic flow
+                    using sensors and real-time data analytics.</p>
+                <div class="ioteng-project-tech-stack">
+                    <h4>Tech Stack:</h4>
+                    <p>Raspberry Pi/ESP32, IR/Ultrasonic sensors, Cameras, MQTT Protocol, Cloud Platform (AWS IoT/Azure
+                        IoT), Data Analytics Tools.</p>
+                </div>
+                <div class="ioteng-project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Real-time vehicle detection at intersections</li>
+                        <li>Adaptive traffic light control based on congestion</li>
+                        <li>Data collection and analysis for traffic patterns</li>
+                        <li>Cloud dashboard for visualization and monitoring</li>
+                        <li>Integration with mobile app for live traffic updates</li>
+                        <li>Scalable and secure IoT network architecture</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="nextora-footer">
+        <div class="footer-container">
+
+            <div class="footer-col footer-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif"
+                            alt="icon1"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif"
+                            alt="icon2"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif"
+                            alt="icon3"></a>
+                    <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif"
+                            alt="icon4"></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Pages</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#service">Services</a></li>
+                    <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Explore</h3>
+                <ul>
+                    <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+                    <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+                    <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Get in Touch</h3>
+                <ul>
+                    <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+                    <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+                    <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza
+                    Ansari</span></p>
+        </div>
+    </footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

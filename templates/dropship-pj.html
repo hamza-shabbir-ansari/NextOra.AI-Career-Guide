@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+        <canvas id="particles"></canvas>
+        <div class="shape circle s1"></div>
+        <div class="shape diamond s2"></div>
+        <div class="shape circle s3"></div>
+        <div class="shape diamond s4"></div>
+        <div class="shape circle s5"></div>
+        <div class="shape diamond s6"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="navbar-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo">
+            </a>
+
+            <div class="navbar-menu">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('home') }}#about">About</a>
+                <a href="{{ url_for('journey_page') }}">Career Guide</a>
+                <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+                <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+            </div>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+            <div class="wrapper-menu" onclick="toggleMenu()">
+                <div class="line-menu half start"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu half end"></div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#about">About</a>
+            <a href="{{ url_for('journey_page') }}">Career Guide</a>
+            <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+            <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+        </div>
+    </header>
+
+
+
+    <section class="nextora-job-hero-section">
+        <div class="nextora-job-hero-content">
+            <h1 class="nextora-job-hero-heading"><span class="gradient-text">Dropshipper Projects</span></h1>
+            <div class="nextora-job-hero-container">
+                <p class="nextora-job-hero-para">At Nextora.AI, learn how to launch and scale profitable dropshipping
+                    businesses with zero inventory. Build projects that teach you product sourcing, automation, and
+                    global e-commerce strategies. 🌍📦</p>
+            </div>
+
+
+        </div>
+    </section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='dropshipping-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='dropshipping-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='dropshipping-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+<section class="dropship-project-section">
+    <h2 class="dropship-project-heading">Dropshipper Project Ideas</h2>
+    <div class="dropship-project-container">
+        
+        <!-- Beginner Level Project -->
+        <div class="dropship-project-card">
+            <h3 class="dropship-project-title">1. Beginner Level – Niche Product Store with Automated Order Fulfillment</h3>
+            <p class="dropship-project-description">A basic dropshipping store focused on a single niche (e.g., fitness accessories, home gadgets, or pet supplies). The project introduces beginners to product research, store setup, and automated order fulfillment.</p>
+            <div class="dropship-project-tech-stack">
+                <h4>Tech Stack:</h4>
+                <p>Shopify/WooCommerce, Oberlo/DSers (for product sourcing), PayPal/Stripe (payment gateway).</p>
+            </div>
+            <div class="dropship-project-features">
+                <h4>Key Features:</h4>
+                <ul>
+                    <li>Single niche-focused product catalog</li>
+                    <li>Automated order placement with suppliers</li>
+                    <li>Payment gateway integration</li>
+                    <li>Basic store design and SEO setup</li>
+                    <li>Beginner-friendly for first-time dropshippers</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Intermediate Level Project -->
+        <div class="dropship-project-card">
+            <h3 class="dropship-project-title">2. Intermediate Level – Multi-Niche Dropshipping Store with Analytics Dashboard</h3>
+            <p class="dropship-project-description">A store offering products across multiple niches, supported by sales analytics to track performance and customer behavior.</p>
+            <div class="dropship-project-tech-stack">
+                <h4>Tech Stack:</h4>
+                <p>Shopify/WooCommerce, DSers/Spocket, Google Analytics, Facebook Ads Manager, Google Data Studio.</p>
+            </div>
+            <div class="dropship-project-features">
+                <h4>Key Features:</h4>
+                <ul>
+                    <li>Multi-niche product catalog management</li>
+                    <li>Real-time sales and traffic analytics</li>
+                    <li>Automated order syncing with suppliers</li>
+                    <li>Discount codes, upselling, and cross-selling features</li>
+                    <li>Marketing integration with Facebook/Instagram ads</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Advanced Level Project -->
+        <div class="dropship-project-card">
+            <h3 class="dropship-project-title">3. Advanced Level – AI-Powered Dropshipping Store with Smart Recommendations</h3>
+            <p class="dropship-project-description">A fully automated dropshipping ecosystem that uses AI for product selection, demand forecasting, and personalized customer recommendations.</p>
+            <div class="dropship-project-tech-stack">
+                <h4>Tech Stack:</h4>
+                <p>Shopify Plus, Python (Pandas, Scikit-learn), TensorFlow Lite, Spocket/Printful APIs, AWS/Google Cloud, Power BI/Tableau.</p>
+            </div>
+            <div class="dropship-project-features">
+                <h4>Key Features:</h4>
+                <ul>
+                    <li>AI-driven product and supplier selection</li>
+                    <li>Smart demand forecasting for inventory and trends</li>
+                    <li>Personalized product recommendations for customers</li>
+                    <li>Multi-language and multi-currency support for global sales</li>
+                    <li>End-to-end automation in marketing, fulfillment, and reporting</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <footer class="nextora-footer">
+        <div class="footer-container">
+
+            <div class="footer-col footer-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif"
+                            alt="icon1"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif"
+                            alt="icon2"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif"
+                            alt="icon3"></a>
+                    <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif"
+                            alt="icon4"></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Pages</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#service">Services</a></li>
+                    <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Explore</h3>
+                <ul>
+                    <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+                    <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+                    <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Get in Touch</h3>
+                <ul>
+                    <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+                    <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+                    <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza
+                    Ansari</span></p>
+        </div>
+    </footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

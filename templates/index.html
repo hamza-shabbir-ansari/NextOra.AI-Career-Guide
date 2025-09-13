@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextOra.Ai</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+<body class="nextora-custom-scrollbar custom-cursor">
+  <div class="background">
+    <canvas id="particles"></canvas>
+    <div class="shape circle s1"></div>
+    <div class="shape diamond s2"></div>
+    <div class="shape circle s3"></div>
+    <div class="shape diamond s4"></div>
+    <div class="shape circle s5"></div>
+    <div class="shape diamond s6"></div>
+  </div>
+
+<header>
+  <nav class="navbar">
+    <a href="{{ url_for('home') }}" class="navbar-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo">
+    </a>
+
+    <div class="navbar-menu">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('home') }}#about">About</a>
+      <a href="{{ url_for('journey_page') }}">Career Guide</a>
+      <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+      <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+    </div>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+    <div class="wrapper-menu" onclick="toggleMenu()">
+      <div class="line-menu half start"></div>
+      <div class="line-menu"></div>
+      <div class="line-menu half end"></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('home') }}#about">About</a>
+    <a href="{{ url_for('journey_page') }}">Career Guide</a>
+    <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+    <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+  </div>
+</header>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-heading">Welcome to NextOra.Ai</h1>
+    <p class="hero-para">At NextOra.AI, we’re shaping your future—helping you explore, decide, and grow in your career.</p>
+    <div class="hero-buttons">
+      <a href="{{ url_for('journey_page') }}" class="btn gradient-btn">Get Started</a>
+      <a href="{{ url_for('home') }}#service" class="btn gradient-btn-outline">Learn More</a>
+    </div>
+  </div>
+  <img src="../static/assets/shades.png" alt="Hero Background" class="hero-bg-image">
+</section>
+
+
+<section id="about" class="nextora-about-section">
+    <div class="nextora-about-container">
+        <div class="nextora-image-wrapper">
+            <img src="../static/assets/about.png" alt="nextOra.Ai futuristic icon" class="nextora-rotating-image">
+        </div>
+        <div class="nextora-content-wrapper">
+            <h2 class="nextora-main-heading">About <span class="gradient-text">NextOra.Ai</span></h2>
+            <p class="nextora-description-para">
+                NextOra.Ai is your personal career guide, designed to help you navigate the complex world of professional development. We use cutting-edge AI and machine learning to provide tailored career suggestions, comprehensive roadmaps, and a clear path to your dream job. Our platform connects your skills and passions with real-world opportunities, making your career journey intuitive and successful.
+            </p>
+            <ul class="nextora-features-list">
+                <li><span class="gradient-text">Career Guides & Suggestions</span></li>
+                <li><span class="gradient-text">Roadmaps - Resources & Project Ideas</span></li>
+                <li><span class="gradient-text">Job & Internship Opportunities</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="service" class="nextora-services-section">
+  <img src="../static/assets/rocket.png" alt="Rocket Icon" class="nextora-rocket-icon">
+    <h2 class="nextora-services-heading gradient-text">Our Services</h2>
+    <div class="nextora-services-cards-container">
+        <div class="nextora-service-card">
+            <div class="card-content">
+                <h3 class="card-title gradient-text-secondary">Career Guide</h3>
+                <p class="card-description">Explore personalized career paths based on your interests, skills, and education. Our AI-powered guide helps you discover the best options for your future.</p>
+                <a href="{{ url_for('journey_page') }}" class="card-link" target="_blank">Explore Now</a>
+            </div>
+        </div>
+
+        <div class="nextora-service-card">
+            <div class="card-content">
+                <h3 class="card-title gradient-text-secondary">AI Navigator</h3>
+                <p class="card-description">Navigate your career journey with our intelligent AI assistant. Get real-time insights, skill recommendations, and step-by-step guidance to reach your goals.</p>
+                <a href="{{ url_for('search_page') }}" class="card-link" target="_blank">Explore Now</a>
+            </div>
+        </div>
+
+        <div class="nextora-service-card">
+            <div class="card-content">
+                <h3 class="card-title gradient-text-secondary">Opportunities</h3>
+                <p class="card-description">Discover a wide range of job and internship opportunities tailored to your profile. Apply directly and take the next step in your career.</p>
+                <a href="{{ url_for('opportunities_page') }}" class="card-link" target="_blank">Find Jobs</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="nextora-footer">
+  <div class="footer-container">
+
+    <div class="footer-col footer-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif" alt="icon1"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif" alt="icon2"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif" alt="icon3"></a>
+        <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif" alt="icon4"></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Pages</h3>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('home') }}#about">About</a></li>
+        <li><a href="{{ url_for('home') }}#service">Services</a></li>
+        <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Explore</h3>
+      <ul>
+        <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+        <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+        <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Get in Touch</h3>
+      <ul>
+        <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+        <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+        <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza Ansari</span></p>
+  </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

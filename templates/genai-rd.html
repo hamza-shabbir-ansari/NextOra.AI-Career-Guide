@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+    <canvas id="particles"></canvas>
+    <div class="shape circle s1"></div>
+    <div class="shape diamond s2"></div>
+    <div class="shape circle s3"></div>
+    <div class="shape diamond s4"></div>
+    <div class="shape circle s5"></div>
+    <div class="shape diamond s6"></div>
+  </div>
+
+<header>
+  <nav class="navbar">
+    <a href="{{ url_for('home') }}" class="navbar-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo">
+    </a>
+
+    <div class="navbar-menu">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('home') }}#about">About</a>
+      <a href="{{ url_for('journey_page') }}">Career Guide</a>
+      <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+      <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+    </div>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+    <div class="wrapper-menu" onclick="toggleMenu()">
+      <div class="line-menu half start"></div>
+      <div class="line-menu"></div>
+      <div class="line-menu half end"></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('home') }}#about">About</a>
+    <a href="{{ url_for('journey_page') }}">Career Guide</a>
+    <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+    <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+  </div>
+</header>
+
+
+
+<section class="nextora-job-hero-section">
+    <div class="nextora-job-hero-content">
+        <h1 class="nextora-job-hero-heading"><span class="gradient-text">NextOra.AI Generative AI Roadmap</span></h1>
+<div class="nextora-job-hero-container">
+    <p class="nextora-job-hero-para">
+        NextOra.AI offers a concise roadmap to mastering Generative AI—from creating intelligent models to building AI-powered content solutions. 
+        Start your journey with NextOra.AI and lead the future of AI innovation. 🤖
+    </p>
+</div>
+
+    </div>
+</section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='gen-ai-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='gen-ai-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='gen-ai-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+
+<section class="genai-roadmap-section">
+    <h2 class="genai-roadmap-main-heading">Generative AI Developer Roadmap</h2>
+    <div class="genai-roadmap-container">
+        <div class="genai-roadmap-path">
+            <div class="genai-roadmap-step">
+                <div class="genai-roadmap-node">Programming Fundamentals</div>
+            </div>
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-split-items">
+                <div class="genai-roadmap-node">Python</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">JavaScript</div>
+            </div>
+        </div>
+
+        <div class="genai-roadmap-path">
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-step">
+                <div class="genai-roadmap-node">Mathematics & Foundations</div>
+            </div>
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-split-items">
+                <div class="genai-roadmap-node">Linear Algebra</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">Probability & Statistics</div>
+            </div>
+        </div>
+        
+        <div class="genai-roadmap-path">
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-step">
+                <div class="genai-roadmap-node">Machine Learning Basics</div>
+            </div>
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-split-items">
+                <div class="genai-roadmap-node">Supervised / Unsupervised Learning</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">Neural Networks</div>
+            </div>
+        </div>
+
+        <div class="genai-roadmap-path">
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-step">
+                <div class="genai-roadmap-node">Deep Learning Foundations</div>
+            </div>
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-split-items">
+                <div class="genai-roadmap-node">CNNs</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">RNNs & LSTMs</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">Attention Mechanisms</div>
+            </div>
+        </div>
+        
+        <div class="genai-roadmap-path">
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-step">
+                <div class="genai-roadmap-node">Generative AI Core</div>
+            </div>
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-split-items">
+                <div class="genai-roadmap-node">Autoencoders / VAEs</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">GANs</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">Transformers & Diffusion Models</div>
+            </div>
+        </div>
+        
+        <div class="genai-roadmap-path">
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-step">
+                <div class="genai-roadmap-node">Frameworks & Libraries</div>
+            </div>
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-split-items">
+                <div class="genai-roadmap-node">TensorFlow / PyTorch</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">Hugging Face</div>
+            </div>
+        </div>
+        
+        <div class="genai-roadmap-path">
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-step">
+                <div class="genai-roadmap-node">Natural Language Processing (NLP)</div>
+            </div>
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-split-items">
+                <div class="genai-roadmap-node">Text Preprocessing</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">Word Embeddings</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">LLMs & Transformers</div>
+            </div>
+        </div>
+        
+        <div class="genai-roadmap-path">
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-step">
+                <div class="genai-roadmap-node">Computer Vision</div>
+            </div>
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-split-items">
+                <div class="genai-roadmap-node">Image Processing</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">GANs for Images</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">Diffusion Models</div>
+            </div>
+        </div>
+        
+        <div class="genai-roadmap-path">
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-step">
+                <div class="genai-roadmap-node">Speech & Audio</div>
+            </div>
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-split-items">
+                <div class="genai-roadmap-node">Speech Recognition / TTS</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">Voice Cloning</div>
+            </div>
+        </div>
+
+        <div class="genai-roadmap-path">
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-step">
+                <div class="genai-roadmap-node">Tools for Generative AI</div>
+            </div>
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-split-items">
+                <div class="genai-roadmap-node">LangChain / LlamaIndex</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">Vector Databases</div>
+            </div>
+        </div>
+
+        <div class="genai-roadmap-path">
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-step">
+                <div class="genai-roadmap-node">Deployment & Integration</div>
+            </div>
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-split-items">
+                <div class="genai-roadmap-node">Model Serving</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">Cloud Platforms</div>
+            </div>
+        </div>
+        
+        <div class="genai-roadmap-path">
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-step">
+                <div class="genai-roadmap-node">Responsible AI</div>
+            </div>
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-split-items">
+                <div class="genai-roadmap-node">AI Ethics</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">Bias & Fairness</div>
+            </div>
+        </div>
+        
+        <div class="genai-roadmap-path">
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-step">
+                <div class="genai-roadmap-node">Advanced Topics</div>
+            </div>
+            <div class="genai-roadmap-line-vertical"></div>
+            <div class="genai-roadmap-split-items">
+                <div class="genai-roadmap-node">Multimodal AI</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">RLHF / Fine-Tuning LLMs</div>
+                <div class="genai-roadmap-line-horizontal"></div>
+                <div class="genai-roadmap-node">Agents & Tool-using AI</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer class="nextora-footer">
+  <div class="footer-container">
+
+    <div class="footer-col footer-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif" alt="icon1"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif" alt="icon2"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif" alt="icon3"></a>
+        <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif" alt="icon4"></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Pages</h3>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('home') }}#about">About</a></li>
+        <li><a href="{{ url_for('home') }}#service">Services</a></li>
+        <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Explore</h3>
+      <ul>
+        <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+        <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+        <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Get in Touch</h3>
+      <ul>
+        <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+        <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+        <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza Ansari</span></p>
+  </div>
+</footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+    <canvas id="particles"></canvas>
+    <div class="shape circle s1"></div>
+    <div class="shape diamond s2"></div>
+    <div class="shape circle s3"></div>
+    <div class="shape diamond s4"></div>
+    <div class="shape circle s5"></div>
+    <div class="shape diamond s6"></div>
+  </div>
+
+<header>
+  <nav class="navbar">
+    <a href="{{ url_for('home') }}" class="navbar-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo">
+    </a>
+
+    <div class="navbar-menu">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('home') }}#about">About</a>
+      <a href="{{ url_for('journey_page') }}">Career Guide</a>
+      <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+      <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+    </div>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+    <div class="wrapper-menu" onclick="toggleMenu()">
+      <div class="line-menu half start"></div>
+      <div class="line-menu"></div>
+      <div class="line-menu half end"></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('home') }}#about">About</a>
+    <a href="{{ url_for('journey_page') }}">Career Guide</a>
+    <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+    <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+  </div>
+</header>
+
+
+
+<section class="nextora-job-hero-section">
+    <div class="nextora-job-hero-content">
+        <h1 class="nextora-job-hero-heading"><span class="gradient-text">NextOra.AI Video Editor Roadmap</span></h1>
+<div class="nextora-job-hero-container">
+    <p class="nextora-job-hero-para">
+        NextOra.AI offers a concise roadmap to mastering Video Editing—from cutting and sequencing footage to creating compelling visual stories. 
+        Start your journey with NextOra.AI and craft videos that captivate and inspire audiences. 🎬
+    </p>
+</div>
+
+    </div>
+</section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='video-editing-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='video-editing-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='video-editing-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+
+<!-- Yeh code Video Editor ke liye ek professional aur fully responsive roadmap ka sirf section tag hai. -->
+<section class="videdi-roadmap-section">
+    <h2 class="videdi-roadmap-main-heading">Video Editor Roadmap</h2>
+    <div class="videdi-roadmap-container">
+        <!-- 1. Basics of Video Editing -->
+        <div class="videdi-roadmap-path">
+            <div class="videdi-roadmap-step">
+                <div class="videdi-roadmap-node">Basics of Video Editing</div>
+            </div>
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-split-items">
+                <div class="videdi-roadmap-node">Video Formats & Frame Rates</div>
+                <div class="videdi-roadmap-line-horizontal"></div>
+                <div class="videdi-roadmap-node">Resolution & Aspect Ratios</div>
+                <div class="videdi-roadmap-line-horizontal"></div>
+                <div class="videdi-roadmap-node">Bitrate & Compression</div>
+            </div>
+        </div>
+
+        <!-- 2. Tools & Software -->
+        <div class="videdi-roadmap-path">
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-step">
+                <div class="videdi-roadmap-node">Tools & Software</div>
+            </div>
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-split-items">
+                <div class="videdi-roadmap-node">Adobe Premiere Pro</div>
+                <div class="videdi-roadmap-line-horizontal"></div>
+                <div class="videdi-roadmap-node">Final Cut Pro</div>
+                <div class="videdi-roadmap-line-horizontal"></div>
+                <div class="videdi-roadmap-node">DaVinci Resolve</div>
+            </div>
+        </div>
+
+        <!-- 3. Editing Fundamentals -->
+        <div class="videdi-roadmap-path">
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-step">
+                <div class="videdi-roadmap-node">Editing Fundamentals</div>
+            </div>
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-split-items">
+                <div class="videdi-roadmap-node">Cutting, Trimming & Transitions</div>
+                <div class="videdi-roadmap-line-horizontal"></div>
+                <div class="videdi-roadmap-node">Titles & Color Correction</div>
+                <div class="videdi-roadmap-line-horizontal"></div>
+                <div class="videdi-roadmap-node">Audio Syncing</div>
+            </div>
+        </div>
+
+        <!-- 4. Advanced Editing Techniques -->
+        <div class="videdi-roadmap-path">
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-step">
+                <div class="videdi-roadmap-node">Advanced Editing Techniques</div>
+            </div>
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-split-items">
+                <div class="videdi-roadmap-node">Multi-Cam & Motion Graphics</div>
+                <div class="videdi-roadmap-line-horizontal"></div>
+                <div class="videdi-roadmap-node">Masking & Speed Ramping</div>
+            </div>
+        </div>
+
+        <!-- 5. Color Grading -->
+        <div class="videdi-roadmap-path">
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-step">
+                <div class="videdi-roadmap-node">Color Grading</div>
+            </div>
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-split-items">
+                <div class="videdi-roadmap-node">Color Theory & LUTs</div>
+                <div class="videdi-roadmap-line-horizontal"></div>
+                <div class="videdi-roadmap-node">Cinematic Grading & Matching</div>
+            </div>
+        </div>
+
+        <!-- 6. Audio Editing -->
+        <div class="videdi-roadmap-path">
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-step">
+                <div class="videdi-roadmap-node">Audio Editing</div>
+            </div>
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-split-items">
+                <div class="videdi-roadmap-node">Noise Reduction & EQ</div>
+                <div class="videdi-roadmap-line-horizontal"></div>
+                <div class="videdi-roadmap-node">SFX & Voiceovers</div>
+            </div>
+        </div>
+
+        <!-- 7. Visual Effects (VFX Integration) -->
+        <div class="videdi-roadmap-path">
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-step">
+                <div class="videdi-roadmap-node">VFX Integration</div>
+            </div>
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-split-items">
+                <div class="videdi-roadmap-node">Green Screen & Tracking</div>
+                <div class="videdi-roadmap-line-horizontal"></div>
+                <div class="videdi-roadmap-node">Compositing & Plugins</div>
+            </div>
+        </div>
+
+        <!-- 8. Storytelling & Editing Styles -->
+        <div class="videdi-roadmap-path">
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-step">
+                <div class="videdi-roadmap-node">Storytelling & Editing Styles</div>
+            </div>
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-split-items">
+                <div class="videdi-roadmap-node">Continuity & Jump Cuts</div>
+                <div class="videdi-roadmap-line-horizontal"></div>
+                <div class="videdi-roadmap-node">Montage & Social Media</div>
+            </div>
+        </div>
+
+        <!-- 9. Export & Distribution -->
+        <div class="videdi-roadmap-path">
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-step">
+                <div class="videdi-roadmap-node">Export & Distribution</div>
+            </div>
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-split-items">
+                <div class="videdi-roadmap-node">Export Settings & Codecs</div>
+                <div class="videdi-roadmap-line-horizontal"></div>
+                <div class="videdi-roadmap-node">Optimizing for Platforms</div>
+            </div>
+        </div>
+
+        <!-- 10. Portfolio & Career -->
+        <div class="videdi-roadmap-path">
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-step">
+                <div class="videdi-roadmap-node">Portfolio & Career</div>
+            </div>
+            <div class="videdi-roadmap-line-vertical"></div>
+            <div class="videdi-roadmap-split-items">
+                <div class="videdi-roadmap-node">Demo Reel Creation</div>
+                <div class="videdi-roadmap-line-horizontal"></div>
+                <div class="videdi-roadmap-node">Freelancing & Clients</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer class="nextora-footer">
+  <div class="footer-container">
+
+    <div class="footer-col footer-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif" alt="icon1"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif" alt="icon2"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif" alt="icon3"></a>
+        <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif" alt="icon4"></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Pages</h3>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('home') }}#about">About</a></li>
+        <li><a href="{{ url_for('home') }}#service">Services</a></li>
+        <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Explore</h3>
+      <ul>
+        <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+        <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+        <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Get in Touch</h3>
+      <ul>
+        <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+        <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+        <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza Ansari</span></p>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

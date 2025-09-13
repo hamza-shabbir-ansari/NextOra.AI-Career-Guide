@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+        <canvas id="particles"></canvas>
+        <div class="shape circle s1"></div>
+        <div class="shape diamond s2"></div>
+        <div class="shape circle s3"></div>
+        <div class="shape diamond s4"></div>
+        <div class="shape circle s5"></div>
+        <div class="shape diamond s6"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="navbar-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo">
+            </a>
+
+            <div class="navbar-menu">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('home') }}#about">About</a>
+                <a href="{{ url_for('journey_page') }}">Career Guide</a>
+                <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+                <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+            </div>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+            <div class="wrapper-menu" onclick="toggleMenu()">
+                <div class="line-menu half start"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu half end"></div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#about">About</a>
+            <a href="{{ url_for('journey_page') }}">Career Guide</a>
+            <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+            <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+        </div>
+    </header>
+
+
+
+    <section class="nextora-job-hero-section">
+        <div class="nextora-job-hero-content">
+            <h1 class="nextora-job-hero-heading"><span class="gradient-text">NextOra.AI Shopify Roadmap</span></h1>
+            <div class="nextora-job-hero-container">
+                <p class="nextora-job-hero-para">
+                    NextOra.AI presents a concise roadmap to mastering Shopify—from setting up online stores to managing
+                    products and driving sales effectively.
+                    Start your journey with NextOra.AI and become a pro in e-commerce success. 🛒
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='shopify-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='shopify-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='shopify-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+
+    <section class="shopi-roadmap-section">
+        <h2 class="shopi-roadmap-main-heading">Shopify / Amazon Specialist Roadmap</h2>
+        <div class="shopi-roadmap-container">
+            <!-- 1. E-commerce Fundamentals -->
+            <div class="shopi-roadmap-path">
+                <div class="shopi-roadmap-step">
+                    <div class="shopi-roadmap-node">E-commerce Fundamentals</div>
+                </div>
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-split-items">
+                    <div class="shopi-roadmap-node">Business Models & Platforms</div>
+                    <div class="shopi-roadmap-line-horizontal"></div>
+                    <div class="shopi-roadmap-node">Dropshipping vs Private Label</div>
+                </div>
+            </div>
+
+            <!-- 2. Shopify Basics -->
+            <div class="shopi-roadmap-path">
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-step">
+                    <div class="shopi-roadmap-node">Shopify Basics</div>
+                </div>
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-split-items">
+                    <div class="shopi-roadmap-node">Account & Dashboard Setup</div>
+                    <div class="shopi-roadmap-line-horizontal"></div>
+                    <div class="shopi-roadmap-node">Products, Collections & Shipping</div>
+                </div>
+            </div>
+
+            <!-- 3. Amazon Basics -->
+            <div class="shopi-roadmap-path">
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-step">
+                    <div class="shopi-roadmap-node">Amazon Basics</div>
+                </div>
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-split-items">
+                    <div class="shopi-roadmap-node">Seller Central & Product Research</div>
+                    <div class="shopi-roadmap-line-horizontal"></div>
+                    <div class="shopi-roadmap-node">FBA vs FBM & Brand Registry</div>
+                </div>
+            </div>
+
+            <!-- 4. Product Research & Selection -->
+            <div class="shopi-roadmap-path">
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-step">
+                    <div class="shopi-roadmap-node">Product Research & Selection</div>
+                </div>
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-split-items">
+                    <div class="shopi-roadmap-node">Niche & Market Demand</div>
+                    <div class="shopi-roadmap-line-horizontal"></div>
+                    <div class="shopi-roadmap-node">Sourcing & Profit Calculation</div>
+                </div>
+            </div>
+
+            <!-- 5. Product Listings -->
+            <div class="shopi-roadmap-path">
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-step">
+                    <div class="shopi-roadmap-node">Product Listings</div>
+                </div>
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-split-items">
+                    <div class="shopi-roadmap-node">Titles, Bullet Points & Descriptions</div>
+                    <div class="shopi-roadmap-line-horizontal"></div>
+                    <div class="shopi-roadmap-node">Images, Videos & A+ Content</div>
+                </div>
+            </div>
+
+            <!-- 6. Store Optimization -->
+            <div class="shopi-roadmap-path">
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-step">
+                    <div class="shopi-roadmap-node">Store Optimization</div>
+                </div>
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-split-items">
+                    <div class="shopi-roadmap-node">Shopify Apps & CRO</div>
+                    <div class="shopi-roadmap-line-horizontal"></div>
+                    <div class="shopi-roadmap-node">Reviews & Social Proof</div>
+                </div>
+            </div>
+
+            <!-- 7. Marketing & Sales -->
+            <div class="shopi-roadmap-path">
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-step">
+                    <div class="shopi-roadmap-node">Marketing & Sales</div>
+                </div>
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-split-items">
+                    <div class="shopi-roadmap-node">Social & Email Marketing</div>
+                    <div class="shopi-roadmap-line-horizontal"></div>
+                    <div class="shopi-roadmap-node">Google & Social Media Ads</div>
+                </div>
+            </div>
+
+            <!-- 8. Amazon Advertising (PPC) -->
+            <div class="shopi-roadmap-path">
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-step">
+                    <div class="shopi-roadmap-node">Amazon Advertising (PPC)</div>
+                </div>
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-split-items">
+                    <div class="shopi-roadmap-node">Sponsored Products & Brands</div>
+                    <div class="shopi-roadmap-line-horizontal"></div>
+                    <div class="shopi-roadmap-node">Keyword Targeting & Optimization</div>
+                </div>
+            </div>
+
+            <!-- 9. Analytics & Reporting -->
+            <div class="shopi-roadmap-path">
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-step">
+                    <div class="shopi-roadmap-node">Analytics & Reporting</div>
+                </div>
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-split-items">
+                    <div class="shopi-roadmap-node">Shopify & Amazon Analytics</div>
+                    <div class="shopi-roadmap-line-horizontal"></div>
+                    <div class="shopi-roadmap-node">Sales & Profit Tracking</div>
+                </div>
+            </div>
+
+            <!-- 10. Customer Service & Retention -->
+            <div class="shopi-roadmap-path">
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-step">
+                    <div class="shopi-roadmap-node">Customer Service & Retention</div>
+                </div>
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-split-items">
+                    <div class="shopi-roadmap-node">Orders & Returns</div>
+                    <div class="shopi-roadmap-line-horizontal"></div>
+                    <div class="shopi-roadmap-node">Loyalty Programs & Subscriptions</div>
+                </div>
+            </div>
+
+            <!-- 11. Advanced Strategies -->
+            <div class="shopi-roadmap-path">
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-step">
+                    <div class="shopi-roadmap-node">Advanced Strategies</div>
+                </div>
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-split-items">
+                    <div class="shopi-roadmap-node">Multi-Channel Selling</div>
+                    <div class="shopi-roadmap-line-horizontal"></div>
+                    <div class="shopi-roadmap-node">Private Label Branding & AI Tools</div>
+                </div>
+            </div>
+
+            <!-- 12. Career & Growth -->
+            <div class="shopi-roadmap-path">
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-step">
+                    <div class="shopi-roadmap-node">Career & Growth</div>
+                </div>
+                <div class="shopi-roadmap-line-vertical"></div>
+                <div class="shopi-roadmap-split-items">
+                    <div class="shopi-roadmap-node">Freelancing & VA</div>
+                    <div class="shopi-roadmap-line-horizontal"></div>
+                    <div class="shopi-roadmap-node">Scaling an Agency & Certifications</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="nextora-footer">
+        <div class="footer-container">
+
+            <div class="footer-col footer-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif"
+                            alt="icon1"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif"
+                            alt="icon2"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif"
+                            alt="icon3"></a>
+                    <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif"
+                            alt="icon4"></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Pages</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#service">Services</a></li>
+                    <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Explore</h3>
+                <ul>
+                    <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+                    <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+                    <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Get in Touch</h3>
+                <ul>
+                    <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+                    <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+                    <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza
+                    Ansari</span></p>
+        </div>
+    </footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+    <canvas id="particles"></canvas>
+    <div class="shape circle s1"></div>
+    <div class="shape diamond s2"></div>
+    <div class="shape circle s3"></div>
+    <div class="shape diamond s4"></div>
+    <div class="shape circle s5"></div>
+    <div class="shape diamond s6"></div>
+  </div>
+
+<header>
+  <nav class="navbar">
+    <a href="{{ url_for('home') }}" class="navbar-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo">
+    </a>
+
+    <div class="navbar-menu">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('home') }}#about">About</a>
+      <a href="{{ url_for('journey_page') }}">Career Guide</a>
+      <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+      <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+    </div>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+    <div class="wrapper-menu" onclick="toggleMenu()">
+      <div class="line-menu half start"></div>
+      <div class="line-menu"></div>
+      <div class="line-menu half end"></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('home') }}#about">About</a>
+    <a href="{{ url_for('journey_page') }}">Career Guide</a>
+    <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+    <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+  </div>
+</header>
+
+
+
+<section class="nextora-job-hero-section">
+    <div class="nextora-job-hero-content">
+       <h1 class="nextora-job-hero-heading"><span class="gradient-text">Machine Learning Resources</span></h1>
+<div class="nextora-job-hero-container">
+    <p class="nextora-job-hero-para">At Nextora.AI, access essential resources to build intelligent models and automate insights. Master algorithms and practical ML applications. 🤖</p>
+</div>
+    </div>
+</section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='machine-learning-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='machine-learning-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='machine-learning-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+
+<!-- YouTube Resources Section -->
+<section class="resource-yt-section">
+  <h2 class="resource-yt-heading">YouTube Videos</h2>
+  <div class="resource-yt-grid">
+    <!-- Card 1 -->
+    <div class="resource-yt-card">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/FP9kL-_k5Ys?si=u93ggyljHv5BjwMH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3 class="resource-yt-title">Machine Learning Full Course 2025 | Intellipaat</h3>
+      <p class="resource-yt-desc">A comprehensive guide covering machine learning fundamentals to advanced topics, designed for beginners.</p>
+      <a href="https://www.youtube.com/embed/FP9kL-_k5Ys?si=u93ggyljHv5BjwMH" target="_blank" class="resource-yt-btn">Watch Now</a>
+    </div>
+    <!-- Card 2 -->
+    <div class="resource-yt-card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=H91Y8A0ASms23Rmc&amp;list=PLEiEAq2VkUUI73199L-Aym2MnKjBxJ-4X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3 class="resource-yt-title">Machine Learning Lectures | Simplilearn</h3>
+      <p class="resource-yt-desc">A curated playlist offering in-depth lectures on various machine learning concepts and techniques.</p>
+      <a href="https://www.youtube.com/embed/videoseries?si=H91Y8A0ASms23Rmc&amp;list=PLEiEAq2VkUUI73199L-Aym2MnKjBxJ-4X" target="_blank" class="resource-yt-btn">Watch Now</a>
+    </div>
+    <!-- Card 3 -->
+    <div class="resource-yt-card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jwTaBztqTZ0?si=PA3RPZYSY1qKXLkx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3 class="resource-yt-title">How to Learn Machine Learning in 2024 (7-Step Roadmap)</h3>
+      <p class="resource-yt-desc">A structured roadmap guiding learners through the essential steps to master machine learning in 2024.</p>
+      <a href="https://www.youtube.com/embed/jwTaBztqTZ0?si=PA3RPZYSY1qKXLkx" target="_blank" class="resource-yt-btn">Watch Now</a>
+    </div>
+    <!-- Card 4 -->
+    <div class="resource-yt-card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FP9kL-_k5Ys?si=CPKnP0ttYXcEyUei" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3 class="resource-yt-title">Machine Learning Course with Microsoft Certification | Intellipaat</h3>
+      <p class="resource-yt-desc">An industry-recognized course providing hands-on experience with machine learning tools and techniques.</p>
+      <a href="https://www.youtube.com/embed/FP9kL-_k5Ys?si=CPKnP0ttYXcEyUei" target="_blank" class="resource-yt-btn">Watch Now</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Document Resources Section -->
+<section class="resources-doc-section">
+  <h2 class="resources-doc-heading">Document Resources</h2>
+  <div class="resources-doc-grid">
+    <!-- Card 1 -->
+    <div class="resources-doc-card">
+      <div class="doc-card-overlay"></div>
+      <h3 class="doc-card-title">Machine Learning Crash Course | Google Developers</h3>
+      <p class="doc-card-desc">
+        A fast-paced, practical introduction to machine learning featuring animated videos and hands-on practice exercises.
+      </p>
+      <a href="https://developers.google.com/machine-learning/crash-course" class="doc-card-btn" target="_blank">Explore Now</a>
+    </div>
+    <!-- Card 2 -->
+    <div class="resources-doc-card">
+      <div class="doc-card-overlay"></div>
+      <h3 class="doc-card-title">CS229: Machine Learning | Stanford University</h3>
+      <p class="doc-card-desc">
+        An advanced course offering a broad introduction to machine learning and statistical pattern recognition.
+      </p>
+      <a href="https://cs229.stanford.edu/" class="doc-card-btn" target="_blank">Explore Now</a>
+    </div>
+    <!-- Card 3 -->
+    <div class="resources-doc-card">
+      <div class="doc-card-overlay"></div>
+      <h3 class="doc-card-title">Machine Learning Course with Microsoft Certification | Intellipaat</h3>
+      <p class="doc-card-desc">
+        A comprehensive course designed by Microsoft's SMEs and industry experts to help learners upgrade their skills in machine learning.
+      </p>
+      <a href="https://intellipaat.com/machine-learning-certification-training-course/" class="doc-card-btn" target="_blank">Explore Now</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="nextora-footer">
+  <div class="footer-container">
+
+    <div class="footer-col footer-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif" alt="icon1"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif" alt="icon2"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif" alt="icon3"></a>
+        <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif" alt="icon4"></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Pages</h3>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('home') }}#about">About</a></li>
+        <li><a href="{{ url_for('home') }}#service">Services</a></li>
+        <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Explore</h3>
+      <ul>
+        <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+        <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+        <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Get in Touch</h3>
+      <ul>
+        <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+        <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+        <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza Ansari</span></p>
+  </div>
+</footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

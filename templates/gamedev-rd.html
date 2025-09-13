@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+        <canvas id="particles"></canvas>
+        <div class="shape circle s1"></div>
+        <div class="shape diamond s2"></div>
+        <div class="shape circle s3"></div>
+        <div class="shape diamond s4"></div>
+        <div class="shape circle s5"></div>
+        <div class="shape diamond s6"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="navbar-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo">
+            </a>
+
+            <div class="navbar-menu">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('home') }}#about">About</a>
+                <a href="{{ url_for('journey_page') }}">Career Guide</a>
+                <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+                <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+            </div>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+            <div class="wrapper-menu" onclick="toggleMenu()">
+                <div class="line-menu half start"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu half end"></div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#about">About</a>
+            <a href="{{ url_for('journey_page') }}">Career Guide</a>
+            <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+            <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+        </div>
+    </header>
+
+
+
+    <section class="nextora-job-hero-section">
+        <div class="nextora-job-hero-content">
+            <h1 class="nextora-job-hero-heading"><span class="gradient-text">NextOra.AI Game Development Roadmap</span>
+            </h1>
+            <div class="nextora-job-hero-container">
+                <p class="nextora-job-hero-para">
+                    NextOra.AI presents a complete roadmap for mastering Game Development—from learning programming and
+                    design fundamentals to creating immersive, interactive experiences.
+                    Explore game engines, graphics, and AI integration to build captivating games for various platforms.
+                    Start your journey with NextOra.AI and become a creator of the next generation of gaming
+                    experiences. 🎮
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='game-developer-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='game-developer-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='game-developer-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+
+    <section class="gamedev-roadmap-section">
+        <h2 class="gamedev-roadmap-main-heading">Game Development Roadmap</h2>
+        <div class="gamedev-roadmap-container">
+            <div class="gamedev-roadmap-path">
+                <div class="gamedev-roadmap-step">
+                    <div class="gamedev-roadmap-node">Programming Fundamentals</div>
+                </div>
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-split-items">
+                    <div class="gamedev-roadmap-node">C++</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">C#</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Python / JavaScript</div>
+                </div>
+            </div>
+
+            <div class="gamedev-roadmap-path">
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-step">
+                    <div class="gamedev-roadmap-node">Game Development Engines</div>
+                </div>
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-split-items">
+                    <div class="gamedev-roadmap-node">Unity (C#)</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Unreal Engine (C++)</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Godot / Phaser</div>
+                </div>
+            </div>
+
+            <div class="gamedev-roadmap-path">
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-step">
+                    <div class="gamedev-roadmap-node">Mathematics for Game Dev</div>
+                </div>
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-split-items">
+                    <div class="gamedev-roadmap-node">Linear Algebra</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Geometry</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Trigonometry & Physics</div>
+                </div>
+            </div>
+
+            <div class="gamedev-roadmap-path">
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-step">
+                    <div class="gamedev-roadmap-node">Game Design Fundamentals</div>
+                </div>
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-split-items">
+                    <div class="gamedev-roadmap-node">Game Loops & Physics</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Collision Detection</div>
+                </div>
+            </div>
+
+            <div class="gamedev-roadmap-path">
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-step">
+                    <div class="gamedev-roadmap-node">Graphics & Rendering</div>
+                </div>
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-split-items">
+                    <div class="gamedev-roadmap-node">2D & 3D Graphics</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Shaders</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Vulkan / DirectX</div>
+                </div>
+            </div>
+
+            <div class="gamedev-roadmap-path">
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-step">
+                    <div class="gamedev-roadmap-node">Audio in Games</div>
+                </div>
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-split-items">
+                    <div class="gamedev-roadmap-node">Sound Effects & Music</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Audio Engines</div>
+                </div>
+            </div>
+
+            <div class="gamedev-roadmap-path">
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-step">
+                    <div class="gamedev-roadmap-node">Asset Creation (Optional)</div>
+                </div>
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-split-items">
+                    <div class="gamedev-roadmap-node">Blender (3D)</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Photoshop (2D)</div>
+                </div>
+            </div>
+
+            <div class="gamedev-roadmap-path">
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-step">
+                    <div class="gamedev-roadmap-node">Multiplayer & Networking</div>
+                </div>
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-split-items">
+                    <div class="gamedev-roadmap-node">Client-Server Model</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Real-Time Sync</div>
+                </div>
+            </div>
+
+            <div class="gamedev-roadmap-path">
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-step">
+                    <div class="gamedev-roadmap-node">Game AI</div>
+                </div>
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-split-items">
+                    <div class="gamedev-roadmap-node">Pathfinding (A*)</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Behavior Trees</div>
+                </div>
+            </div>
+
+            <div class="gamedev-roadmap-path">
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-step">
+                    <div class="gamedev-roadmap-node">Testing & Optimization</div>
+                </div>
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-split-items">
+                    <div class="gamedev-roadmap-node">Debugging</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Performance Profiling</div>
+                </div>
+            </div>
+
+            <div class="gamedev-roadmap-path">
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-step">
+                    <div class="gamedev-roadmap-node">Deployment</div>
+                </div>
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-split-items">
+                    <div class="gamedev-roadmap-node">PC / Mobile</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Web / Consoles</div>
+                </div>
+            </div>
+
+            <div class="gamedev-roadmap-path">
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-step">
+                    <div class="gamedev-roadmap-node">Advanced Topics</div>
+                </div>
+                <div class="gamedev-roadmap-line-vertical"></div>
+                <div class="gamedev-roadmap-split-items">
+                    <div class="gamedev-roadmap-node">VR / AR</div>
+                    <div class="gamedev-roadmap-line-horizontal"></div>
+                    <div class="gamedev-roadmap-node">Cloud Gaming</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="nextora-footer">
+        <div class="footer-container">
+
+            <div class="footer-col footer-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif"
+                            alt="icon1"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif"
+                            alt="icon2"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif"
+                            alt="icon3"></a>
+                    <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif"
+                            alt="icon4"></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Pages</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#service">Services</a></li>
+                    <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Explore</h3>
+                <ul>
+                    <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+                    <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+                    <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Get in Touch</h3>
+                <ul>
+                    <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+                    <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+                    <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza
+                    Ansari</span></p>
+        </div>
+    </footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

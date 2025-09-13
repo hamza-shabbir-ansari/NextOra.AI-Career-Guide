@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+        <canvas id="particles"></canvas>
+        <div class="shape circle s1"></div>
+        <div class="shape diamond s2"></div>
+        <div class="shape circle s3"></div>
+        <div class="shape diamond s4"></div>
+        <div class="shape circle s5"></div>
+        <div class="shape diamond s6"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="navbar-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo">
+            </a>
+
+            <div class="navbar-menu">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('home') }}#about">About</a>
+                <a href="{{ url_for('journey_page') }}">Career Guide</a>
+                <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+                <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+            </div>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+            <div class="wrapper-menu" onclick="toggleMenu()">
+                <div class="line-menu half start"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu half end"></div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#about">About</a>
+            <a href="{{ url_for('journey_page') }}">Career Guide</a>
+            <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+            <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+        </div>
+    </header>
+
+
+
+    <section class="nextora-job-hero-section">
+        <div class="nextora-job-hero-content">
+            <h1 class="nextora-job-hero-heading"><span class="gradient-text">NextOra.AI E-Commerce Roadmap</span></h1>
+            <div class="nextora-job-hero-container">
+                <p class="nextora-job-hero-para">
+                    NextOra.AI presents a complete roadmap for mastering E-Commerce—from setting up online stores to
+                    driving sales and scaling businesses globally.
+                    Learn strategies in digital marketing, product management, and customer experience to thrive in the
+                    competitive online marketplace.
+                    Start your journey with NextOra.AI and become a successful e-commerce entrepreneur. 🛍️
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='ecommerce-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='ecommerce-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='ecommerce-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+
+    <section class="ecomsto-roadmap-section">
+        <h2 class="ecomsto-roadmap-main-heading">E-Commerce Store Manager Roadmap</h2>
+        <div class="ecomsto-roadmap-container">
+            <!-- 1. E-commerce Fundamentals -->
+            <div class="ecomsto-roadmap-path">
+                <div class="ecomsto-roadmap-step">
+                    <div class="ecomsto-roadmap-node">E-commerce Fundamentals</div>
+                </div>
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-split-items">
+                    <div class="ecomsto-roadmap-node">Business Models & Trends</div>
+                    <div class="ecomsto-roadmap-line-horizontal"></div>
+                    <div class="ecomsto-roadmap-node">Marketplaces vs Independent Stores</div>
+                </div>
+            </div>
+
+            <!-- 2. Store Setup & Platforms -->
+            <div class="ecomsto-roadmap-path">
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-step">
+                    <div class="ecomsto-roadmap-node">Store Setup & Platforms</div>
+                </div>
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-split-items">
+                    <div class="ecomsto-roadmap-node">Shopify & WooCommerce</div>
+                    <div class="ecomsto-roadmap-line-horizontal"></div>
+                    <div class="ecomsto-roadmap-node">Amazon & BigCommerce</div>
+                </div>
+            </div>
+
+            <!-- 3. Product Management -->
+            <div class="ecomsto-roadmap-path">
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-step">
+                    <div class="ecomsto-roadmap-node">Product Management</div>
+                </div>
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-split-items">
+                    <div class="ecomsto-roadmap-node">Research & Inventory</div>
+                    <div class="ecomsto-roadmap-line-horizontal"></div>
+                    <div class="ecomsto-roadmap-node">Pricing & Categorization</div>
+                </div>
+            </div>
+
+            <!-- 4. Store Design & Optimization -->
+            <div class="ecomsto-roadmap-path">
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-step">
+                    <div class="ecomsto-roadmap-node">Store Design & Optimization</div>
+                </div>
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-split-items">
+                    <div class="ecomsto-roadmap-node">CRO & Mobile-Friendly Design</div>
+                    <div class="ecomsto-roadmap-line-horizontal"></div>
+                    <div class="ecomsto-roadmap-node">Page Speed & UX/UI</div>
+                </div>
+            </div>
+
+            <!-- 5. Marketing & Sales -->
+            <div class="ecomsto-roadmap-path">
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-step">
+                    <div class="ecomsto-roadmap-node">Marketing & Sales</div>
+                </div>
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-split-items">
+                    <div class="ecomsto-roadmap-node">Social & Email Marketing</div>
+                    <div class="ecomsto-roadmap-line-horizontal"></div>
+                    <div class="ecomsto-roadmap-node">Google & Facebook Ads</div>
+                </div>
+            </div>
+
+            <!-- 6. SEO & Analytics -->
+            <div class="ecomsto-roadmap-path">
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-step">
+                    <div class="ecomsto-roadmap-node">SEO & Analytics</div>
+                </div>
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-split-items">
+                    <div class="ecomsto-roadmap-node">SEO Basics & Keyword Research</div>
+                    <div class="ecomsto-roadmap-line-horizontal"></div>
+                    <div class="ecomsto-roadmap-node">Google Analytics & Reports</div>
+                </div>
+            </div>
+
+            <!-- 7. Order & Customer Management -->
+            <div class="ecomsto-roadmap-path">
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-step">
+                    <div class="ecomsto-roadmap-node">Order & Customer Management</div>
+                </div>
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-split-items">
+                    <div class="ecomsto-roadmap-node">Order Processing & Shipping</div>
+                    <div class="ecomsto-roadmap-line-horizontal"></div>
+                    <div class="ecomsto-roadmap-node">Returns & Customer Loyalty</div>
+                </div>
+            </div>
+
+            <!-- 8. Payment & Security -->
+            <div class="ecomsto-roadmap-path">
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-step">
+                    <div class="ecomsto-roadmap-node">Payment & Security</div>
+                </div>
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-split-items">
+                    <div class="ecomsto-roadmap-node">Payment Gateways & Fraud</div>
+                    <div class="ecomsto-roadmap-line-horizontal"></div>
+                    <div class="ecomsto-roadmap-node">Data Protection & Privacy</div>
+                </div>
+            </div>
+
+            <!-- 9. Operations & Tools -->
+            <div class="ecomsto-roadmap-path">
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-step">
+                    <div class="ecomsto-roadmap-node">Operations & Tools</div>
+                </div>
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-split-items">
+                    <div class="ecomsto-roadmap-node">Project Management & E-commerce Tools</div>
+                    <div class="ecomsto-roadmap-line-horizontal"></div>
+                    <div class="ecomsto-roadmap-node">Automation & Inventory Systems</div>
+                </div>
+            </div>
+
+            <!-- 10. Advanced Store Management -->
+            <div class="ecomsto-roadmap-path">
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-step">
+                    <div class="ecomsto-roadmap-node">Advanced Store Management</div>
+                </div>
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-split-items">
+                    <div class="ecomsto-roadmap-node">Multi-Channel Selling</div>
+                    <div class="ecomsto-roadmap-line-horizontal"></div>
+                    <div class="ecomsto-roadmap-node">Scaling & Private Label</div>
+                </div>
+            </div>
+
+            <!-- 11. Career Growth -->
+            <div class="ecomsto-roadmap-path">
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-step">
+                    <div class="ecomsto-roadmap-node">Career Growth</div>
+                </div>
+                <div class="ecomsto-roadmap-line-vertical"></div>
+                <div class="ecomsto-roadmap-split-items">
+                    <div class="ecomsto-roadmap-node">Freelancing & Jobs</div>
+                    <div class="ecomsto-roadmap-line-horizontal"></div>
+                    <div class="ecomsto-roadmap-node">Agency & Certifications</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="nextora-footer">
+        <div class="footer-container">
+
+            <div class="footer-col footer-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif"
+                            alt="icon1"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif"
+                            alt="icon2"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif"
+                            alt="icon3"></a>
+                    <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif"
+                            alt="icon4"></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Pages</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#service">Services</a></li>
+                    <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Explore</h3>
+                <ul>
+                    <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+                    <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+                    <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Get in Touch</h3>
+                <ul>
+                    <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+                    <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+                    <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza
+                    Ansari</span></p>
+        </div>
+    </footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

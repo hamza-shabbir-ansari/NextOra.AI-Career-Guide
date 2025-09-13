@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+        <canvas id="particles"></canvas>
+        <div class="shape circle s1"></div>
+        <div class="shape diamond s2"></div>
+        <div class="shape circle s3"></div>
+        <div class="shape diamond s4"></div>
+        <div class="shape circle s5"></div>
+        <div class="shape diamond s6"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="navbar-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo">
+            </a>
+
+            <div class="navbar-menu">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('home') }}#about">About</a>
+                <a href="{{ url_for('journey_page') }}">Career Guide</a>
+                <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+                <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+            </div>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+            <div class="wrapper-menu" onclick="toggleMenu()">
+                <div class="line-menu half start"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu half end"></div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#about">About</a>
+            <a href="{{ url_for('journey_page') }}">Career Guide</a>
+            <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+            <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+        </div>
+    </header>
+
+
+
+    <section class="nextora-job-hero-section">
+        <div class="nextora-job-hero-content">
+            <h1 class="nextora-job-hero-heading"><span class="gradient-text">Physiotherapist Practice</span></h1>
+            <div class="nextora-job-hero-container">
+                <p class="nextora-job-hero-para">At Nextora.AI, strengthen your physiotherapy skills with practical
+                    exercises and patient rehabilitation techniques. Learn mobility improvement, therapy methods, and
+                    injury recovery practices. 🏃‍♂️💪</p>
+            </div>
+
+
+        </div>
+    </section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='physiotherapist-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='physiotherapist-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='physiotherapist-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+    <section class="physiotherapist-project-section">
+        <h2 class="physiotherapist-project-heading">Physiotherapist Practice Ideas</h2>
+        <div class="physiotherapist-project-container">
+
+            <!-- Beginner Level Project -->
+            <div class="physiotherapist-project-card">
+                <h3 class="physiotherapist-project-title">1. Beginner Level – Basic Assessment and Manual Therapy
+                    Practice</h3>
+                <p class="physiotherapist-project-description">At this stage, learners practice the fundamentals of
+                    physiotherapy, focusing on posture analysis, muscle testing, and manual therapy techniques to build
+                    a strong clinical foundation.</p>
+                <div class="physiotherapist-project-tech-stack">
+                    <h4>Practice Stack:</h4>
+                    <p>Anatomical models, Goniometer, Resistance bands, Exercise mats, Patient case simulations.</p>
+                </div>
+                <div class="physiotherapist-project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Practicing patient posture and gait analysis</li>
+                        <li>Learning joint movement and range of motion assessment</li>
+                        <li>Manual muscle testing for strength evaluation</li>
+                        <li>Introduction to stretching and mobility exercises</li>
+                        <li>Practicing therapeutic communication with patients</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Intermediate Level Project -->
+            <div class="physiotherapist-project-card">
+                <h3 class="physiotherapist-project-title">2. Intermediate Level – Rehabilitation and Exercise-Based
+                    Therapy</h3>
+                <p class="physiotherapist-project-description">At the intermediate stage, learners practice
+                    rehabilitation methods for patients recovering from injuries, surgeries, or chronic conditions. The
+                    focus is on exercise prescription, therapy planning, and patient monitoring.</p>
+                <div class="physiotherapist-project-tech-stack">
+                    <h4>Practice Stack:</h4>
+                    <p>Physiotherapy lab equipment (treadmills, exercise balls, resistance machines), Electrotherapy
+                        devices (TENS, Ultrasound therapy), Clinical practice sessions, Patient simulation tools.</p>
+                </div>
+                <div class="physiotherapist-project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Designing rehabilitation exercise programs for different conditions</li>
+                        <li>Practicing balance and coordination training</li>
+                        <li>Using electrotherapy equipment under supervision</li>
+                        <li>Applying taping and bracing techniques for injury support</li>
+                        <li>Monitoring patient progress and adjusting therapy plans</li>
+                        <li>Collaborating with other healthcare professionals during clinical practice</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Advanced Level Project -->
+            <div class="physiotherapist-project-card">
+                <h3 class="physiotherapist-project-title">3. Advanced Level – Specialized Physiotherapy and Clinical
+                    Research</h3>
+                <p class="physiotherapist-project-description">At the advanced stage, physiotherapists practice
+                    specialized care in areas like sports physiotherapy, neurological rehabilitation, or pediatric
+                    therapy. This level also involves clinical research and leadership in patient care.</p>
+                <div class="physiotherapist-project-tech-stack">
+                    <h4>Practice Stack:</h4>
+                    <p>Advanced rehabilitation centers, Motion analysis systems, Virtual rehabilitation tools (VR-based
+                        therapy), Clinical case studies, Research journals.</p>
+                </div>
+                <div class="physiotherapist-project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Practicing specialized rehabilitation programs (sports, neurological, pediatric)</li>
+                        <li>Using advanced motion tracking and gait analysis systems</li>
+                        <li>Engaging in clinical research for evidence-based practice</li>
+                        <li>Leading physiotherapy teams and mentoring junior practitioners</li>
+                        <li>Designing long-term patient care and preventive therapy programs</li>
+                        <li>Applying innovative methods like hydrotherapy or VR-assisted therapy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="nextora-footer">
+        <div class="footer-container">
+
+            <div class="footer-col footer-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif"
+                            alt="icon1"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif"
+                            alt="icon2"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif"
+                            alt="icon3"></a>
+                    <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif"
+                            alt="icon4"></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Pages</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#service">Services</a></li>
+                    <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Explore</h3>
+                <ul>
+                    <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+                    <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+                    <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Get in Touch</h3>
+                <ul>
+                    <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+                    <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+                    <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza
+                    Ansari</span></p>
+        </div>
+    </footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

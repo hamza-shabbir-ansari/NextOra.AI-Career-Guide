@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+    <canvas id="particles"></canvas>
+    <div class="shape circle s1"></div>
+    <div class="shape diamond s2"></div>
+    <div class="shape circle s3"></div>
+    <div class="shape diamond s4"></div>
+    <div class="shape circle s5"></div>
+    <div class="shape diamond s6"></div>
+  </div>
+
+<header>
+  <nav class="navbar">
+    <a href="{{ url_for('home') }}" class="navbar-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo">
+    </a>
+
+    <div class="navbar-menu">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('home') }}#about">About</a>
+      <a href="{{ url_for('journey_page') }}">Career Guide</a>
+      <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+      <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+    </div>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+    <div class="wrapper-menu" onclick="toggleMenu()">
+      <div class="line-menu half start"></div>
+      <div class="line-menu"></div>
+      <div class="line-menu half end"></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('home') }}#about">About</a>
+    <a href="{{ url_for('journey_page') }}">Career Guide</a>
+    <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+    <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+  </div>
+</header>
+
+
+
+<section class="nextora-job-hero-section">
+    <div class="nextora-job-hero-content">
+        <h1 class="nextora-job-hero-heading"><span class="gradient-text">NextOra.AI SEO Specialist Roadmap</span></h1>
+<div class="nextora-job-hero-container">
+    <p class="nextora-job-hero-para">
+        NextOra.AI offers a concise roadmap to becoming an SEO Specialist—from mastering search engine strategies to optimizing digital content for maximum visibility. 
+        Start your journey with NextOra.AI and elevate online presence with expert SEO skills. 🌐
+    </p>
+</div>
+
+    </div>
+</section>
+
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='seo-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='seo-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='seo-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+
+<section class="seospe-roadmap-section">
+    <h2 class="seospe-roadmap-main-heading">SEO Specialist Roadmap</h2>
+    <div class="seospe-roadmap-container">
+        <!-- 1. SEO Fundamentals -->
+        <div class="seospe-roadmap-path">
+            <div class="seospe-roadmap-step">
+                <div class="seospe-roadmap-node">SEO Fundamentals</div>
+            </div>
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-split-items">
+                <div class="seospe-roadmap-node">Types of SEO</div>
+                <div class="seospe-roadmap-line-horizontal"></div>
+                <div class="seospe-roadmap-node">Algorithms & SERP Features</div>
+            </div>
+        </div>
+
+        <!-- 2. Keyword Research -->
+        <div class="seospe-roadmap-path">
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-step">
+                <div class="seospe-roadmap-node">Keyword Research</div>
+            </div>
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-split-items">
+                <div class="seospe-roadmap-node">Search Intent & Keyword Types</div>
+                <div class="seospe-roadmap-line-horizontal"></div>
+                <div class="seospe-roadmap-node">Competitor Analysis</div>
+            </div>
+        </div>
+
+        <!-- 3. On-Page SEO -->
+        <div class="seospe-roadmap-path">
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-step">
+                <div class="seospe-roadmap-node">On-Page SEO</div>
+            </div>
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-split-items">
+                <div class="seospe-roadmap-node">Title Tags & URLs</div>
+                <div class="seospe-roadmap-line-horizontal"></div>
+                <div class="seospe-roadmap-node">Image & Content Optimization</div>
+            </div>
+        </div>
+
+        <!-- 4. Technical SEO -->
+        <div class="seospe-roadmap-path">
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-step">
+                <div class="seospe-roadmap-node">Technical SEO</div>
+            </div>
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-split-items">
+                <div class="seospe-roadmap-node">Page Speed & Core Web Vitals</div>
+                <div class="seospe-roadmap-line-horizontal"></div>
+                <div class="seospe-roadmap-node">Sitemaps & Robots.txt</div>
+            </div>
+        </div>
+
+        <!-- 5. Off-Page SEO -->
+        <div class="seospe-roadmap-path">
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-step">
+                <div class="seospe-roadmap-node">Off-Page SEO</div>
+            </div>
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-split-items">
+                <div class="seospe-roadmap-node">Backlink Building</div>
+                <div class="seospe-roadmap-line-horizontal"></div>
+                <div class="seospe-roadmap-node">Social Signals & PR</div>
+            </div>
+        </div>
+
+        <!-- 6. Content Strategy for SEO -->
+        <div class="seospe-roadmap-path">
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-step">
+                <div class="seospe-roadmap-node">Content Strategy for SEO</div>
+            </div>
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-split-items">
+                <div class="seospe-roadmap-node">Pillar Pages & Topic Clusters</div>
+                <div class="seospe-roadmap-line-horizontal"></div>
+                <div class="seospe-roadmap-node">Evergreen Content</div>
+            </div>
+        </div>
+
+        <!-- 7. Local SEO -->
+        <div class="seospe-roadmap-path">
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-step">
+                <div class="seospe-roadmap-node">Local SEO</div>
+            </div>
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-split-items">
+                <div class="seospe-roadmap-node">Google Business Profile</div>
+                <div class="seospe-roadmap-line-horizontal"></div>
+                <div class="seospe-roadmap-node">NAP & Local Citations</div>
+            </div>
+        </div>
+
+        <!-- 8. SEO Tools -->
+        <div class="seospe-roadmap-path">
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-step">
+                <div class="seospe-roadmap-node">SEO Tools</div>
+            </div>
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-split-items">
+                <div class="seospe-roadmap-node">Google Analytics & Search Console</div>
+                <div class="seospe-roadmap-line-horizontal"></div>
+                <div class="seospe-roadmap-node">Ahrefs & SEMrush</div>
+            </div>
+        </div>
+        
+        <!-- 9. Advanced SEO -->
+        <div class="seospe-roadmap-path">
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-step">
+                <div class="seospe-roadmap-node">Advanced SEO</div>
+            </div>
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-split-items">
+                <div class="seospe-roadmap-node">Voice & E-commerce SEO</div>
+                <div class="seospe-roadmap-line-horizontal"></div>
+                <div class="seospe-roadmap-node">Mobile-first Indexing & AI</div>
+            </div>
+        </div>
+        
+        <!-- 10. Career & Growth -->
+        <div class="seospe-roadmap-path">
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-step">
+                <div class="seospe-roadmap-node">Career & Growth</div>
+            </div>
+            <div class="seospe-roadmap-line-vertical"></div>
+            <div class="seospe-roadmap-split-items">
+                <div class="seospe-roadmap-node">SEO Audits & Campaigns</div>
+                <div class="seospe-roadmap-line-horizontal"></div>
+                <div class="seospe-roadmap-node">Certifications & Trends</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer class="nextora-footer">
+  <div class="footer-container">
+
+    <div class="footer-col footer-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif" alt="icon1"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif" alt="icon2"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif" alt="icon3"></a>
+        <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif" alt="icon4"></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Pages</h3>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('home') }}#about">About</a></li>
+        <li><a href="{{ url_for('home') }}#service">Services</a></li>
+        <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Explore</h3>
+      <ul>
+        <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+        <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+        <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Get in Touch</h3>
+      <ul>
+        <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+        <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+        <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza Ansari</span></p>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

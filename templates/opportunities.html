@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>NextOra.Ai</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+    <canvas id="particles"></canvas>
+    <div class="shape circle s1"></div>
+    <div class="shape diamond s2"></div>
+    <div class="shape circle s3"></div>
+    <div class="shape diamond s4"></div>
+    <div class="shape circle s5"></div>
+    <div class="shape diamond s6"></div>
+  </div>
+
+<header>
+  <nav class="navbar">
+    <a href="{{ url_for('home') }}" class="navbar-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo">
+    </a>
+
+    <div class="navbar-menu">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('home') }}#about">About</a>
+      <a href="{{ url_for('journey_page') }}">Career Guide</a>
+      <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+      <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+    </div>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+    <div class="wrapper-menu" onclick="toggleMenu()">
+      <div class="line-menu half start"></div>
+      <div class="line-menu"></div>
+      <div class="line-menu half end"></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('home') }}#about">About</a>
+    <a href="{{ url_for('journey_page') }}">Career Guide</a>
+    <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+    <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+    <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+  </div>
+</header>
+
+<section class="nextora-job-hero-section">
+    <div class="nextora-job-hero-content">
+        <h1 class="nextora-job-hero-heading"><span class="gradient-text">Nextora.AI Opportunities</span></h1>
+        <div class="nextora-job-hero-container">
+            <p class="nextora-job-hero-para">At Nextora.AI, we connect ambitious talent with the right jobs and internships to help them grow. Whether you’re starting your career or looking for the next big step, our AI-powered platform makes discovering opportunities smarter, faster, and more personalized. 🚀</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="job-section">
+    <!-- Rotating Background Image -->
+    <div class="job-rotate-image">
+      <img src="../static/assets/job ani.png" alt="AI Icon">
+    </div>
+
+    <div class="job-container">
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company1.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>Systems Limited</h3>
+          <p>Systems Limited, founded in 1977, is Pakistan’s top IT company with global recognition.It provides digital transformation, cloud, data, and BPO solutions to Fortune 500 and diverse clients worldwide.</p>
+          <a href="https://www.linkedin.com/jobs/systems-limited-jobs-worldwide?f_C=15350&trk=top-card_top-card-primary-button-top-card-primary-cta&position=1&pageNum=0" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company2.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>NETSOL Technologies Pakistan</h3>
+          <p>NETSOL Technologies, founded in 1996, is a global leader in asset finance and leasing solutions across 30+ countries.Its flagship product NFS, powered by AI and cloud, serves top automotive OEMs, captives, and financial institutions.</p>
+          <a href="https://www.linkedin.com/company/netsol-tech-pakistan/jobs/" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company3.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>10Pearls</h3>
+          <p>10Pearls is a global AI consultancy and digital partner, delivering end-to-end solutions in AI/ML, Blockchain, IoT, AR/VR, cloud, and cybersecurity.With 1,300+ experts worldwide, it serves top clients like Coca-Cola, PayPal, Adobe, and National Geographic across multiple industries.</p>
+          <a href="https://www.linkedin.com/jobs/search/?currentJobId=4190225538&f_C=327623%2C16235125&geoId=92000000&origin=COMPANY_PAGE_JOBS_CLUSTER_EXPANSION&originToLandingJobPostings=4190225538%2C4190222631%2C4277440773%2C4288491872%2C4254944976%2C4279649601%2C4267590802%2C4280809328%2C4249012440" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company4.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>Clustox </h3>
+          <p>Clustox offers end-to-end product and custom application development with expertise in full-stack, mobile, web, cloud, DevOps, and AI/ML.Its 110+ engineers deliver services across SaaS development, UI/UX design, deployment, and quality assurance.</p>
+          <a href="https://www.linkedin.com/jobs/search/?currentJobId=4283346940&f_C=2549608&geoId=92000000&origin=COMPANY_PAGE_JOBS_CLUSTER_EXPANSION&originToLandingJobPostings=4283346940%2C4281779114%2C4270293975%2C4270025835" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company5.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>Techlogix</h3>
+          <p>Techlogix is a global IT services and consulting company driving enterprise transformation through people, processes, and technology.Its distributed teams deliver high-performance solutions with expertise in innovation, digital transformation, and industry-specific platforms.</p>
+          <a href="https://www.linkedin.com/company/techlogix/jobs/" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company6.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>Avanza Solutions</h3>
+          <p>Since 2000, Avanza Solutions has been driving global digital transformation with innovative platforms in banking, AI, blockchain, smart cities, and automation.It delivers cutting-edge digital solutions across sectors like finance, telecom, insurance, pharma, and government.</p>
+          <a href="https://www.linkedin.com/company/avanza-solutions/jobs/" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company7.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>Contour Software</h3>
+          <p>Contour Software, a subsidiary of Constellation Software Inc. (CSI), supports 120+ divisions across 80+ industries in 100+ countries.With offices in Karachi, Lahore, and Islamabad, its teams handle R&D, finance, IT, support, sales, and more for CSI’s global clients.</p>
+          <a href="https://www.linkedin.com/jobs/search/?currentJobId=4271083602&f_C=1801323&geoId=92000000&origin=COMPANY_PAGE_JOBS_CLUSTER_EXPANSION&originToLandingJobPostings=4271083602%2C4263268962%2C4288384454%2C4259489276%2C4278336521%2C4280152746%2C4265235807%2C4280154661%2C4278610478" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company8.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>Q-Soft Technologies</h3>
+          <p>Q-Soft Technologies specializes in enterprise software while also excelling in IT consultancy, web hosting, and digital marketing.The company offers services like email & SMS marketing alongside software development.</p>
+          <a href="https://www.linkedin.com/company/q-soft-technologies/jobs/" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+      
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company9.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>Code Ninja</h3>
+          <p>CodeNinja builds and operates Global Capability Centers (GCCs) with elite AI and engineering talent, driving innovation for leading global businesses.Its platform, Hyper, empowers developers with AI and automation to accelerate complex solutions in energy, healthcare, logistics, and more.</p>
+          <a href="https://www.linkedin.com/jobs/search/?currentJobId=4275575288&f_C=6465114&geoId=92000000&origin=COMPANY_PAGE_JOBS_CLUSTER_EXPANSION&originToLandingJobPostings=4275575288%2C4282127006%2C4275553599%2C4283978409%2C4283457365%2C4280757130%2C4277797453%2C4287930249%2C4277796545" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company10.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>Novatore Solutions</h3>
+          <p>Novatore Solutions is a global digital transformation and software consulting company with a presence across USA, Europe, Asia, and the Middle East.With 10+ years of expertise, it delivers custom solutions in AI, ML, cloud, IoT, blockchain, and digital transformation.</p>
+          <a href="https://www.linkedin.com/company/novatore-solutions/jobs/" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company11.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>Folio3 Pakistan</h3>
+          <p>Folio3 is a Silicon Valley–based software company serving global clients in ERP, eCommerce, mobile, and enterprise solutions.It partners with enterprises and mid-sized firms for NetSuite and Microsoft Dynamics implementations.</p>
+          <a href="https://www.linkedin.com/company/folio3pakistan/jobs/" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company12.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>TPS Worldwide</h3>
+          <p>TPS is a global provider of digital payments and banking solutions, serving banks, fintechs, and enterprises in 30+ markets.With 28+ years of experience and 200+ clients, it delivers secure, scalable systems for financial transformation and real-time innovation.</p>
+          <a href="https://www.linkedin.com/company/tpsworldwide/jobs/" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company13.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>Venture Dive</h3>
+          <p>VentureDive builds scalable, intelligent solutions leveraging Data and AI to drive enterprise transformation.It helps businesses identify and implement high-impact use cases from proof of concept to full production.</p>
+          <a href="https://www.linkedin.com/jobs/search/?currentJobId=4280411169&f_C=2619143%2C101065257&geoId=92000000&origin=COMPANY_PAGE_JOBS_CLUSTER_EXPANSION&originToLandingJobPostings=4280411169%2C4286925646%2C4280410281%2C4257489931%2C4288316692%2C4280366835%2C4268179742" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company14.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>OVEX</h3>
+          <p>OVEX is a mission-driven cryptocurrency exchange focused on making crypto the leading settlement layer in Africa.It bridges the gap between traditional finance and cryptocurrency.Serving Africa’s largest institutions, OVEX drives financial innovation across the region.</p>
+          <a href="https://www.linkedin.com/company/ovex-exchange/jobs/" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-card-left">
+          <img src="../static/assets/company15.jpeg" alt="Company Logo">
+        </div>
+        <div class="job-card-right">
+          <h3>KALSOFT</h3>
+          <p>KalSoft, established in 1999, is a multi-award-winning Microsoft Solutions Partner delivering digital modernization across industries worldwide.With offices in 6 countries, it provides expertise in AI, cloud, business apps, IoT, automation, and enterprise solutions.</p>
+          <a href="https://www.linkedin.com/jobs/search/?currentJobId=4285011130&f_C=18519&geoId=92000000&origin=COMPANY_PAGE_JOBS_CLUSTER_EXPANSION&originToLandingJobPostings=4285011130%2C4285840126" target="_blank" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </section>
+
+<footer class="nextora-footer">
+  <div class="footer-container">
+
+    <div class="footer-col footer-logo">
+      <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif" alt="icon1"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif" alt="icon2"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif" alt="icon3"></a>
+        <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif" alt="icon4"></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Pages</h3>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('home') }}#about">About</a></li>
+        <li><a href="{{ url_for('home') }}#service">Services</a></li>
+        <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Explore</h3>
+      <ul>
+        <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+        <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+        <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h3 class="footer-heading gradient-text">Get in Touch</h3>
+      <ul>
+        <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+        <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+        <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza Ansari</span></p>
+  </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

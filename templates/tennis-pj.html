@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOra.Ai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../static/assets/favicon.png">
+</head>
+
+<body class="nextora-custom-scrollbar custom-cursor">
+    <div class="background">
+        <canvas id="particles"></canvas>
+        <div class="shape circle s1"></div>
+        <div class="shape diamond s2"></div>
+        <div class="shape circle s3"></div>
+        <div class="shape diamond s4"></div>
+        <div class="shape circle s5"></div>
+        <div class="shape diamond s6"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="navbar-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo">
+            </a>
+
+            <div class="navbar-menu">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('home') }}#about">About</a>
+                <a href="{{ url_for('journey_page') }}">Career Guide</a>
+                <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+                <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+            </div>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+
+            <div class="wrapper-menu" onclick="toggleMenu()">
+                <div class="line-menu half start"></div>
+                <div class="line-menu"></div>
+                <div class="line-menu half end"></div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#about">About</a>
+            <a href="{{ url_for('journey_page') }}">Career Guide</a>
+            <a href="{{ url_for('search_page') }}">Ai Navigator</a>
+            <a href="{{ url_for('opportunities_page') }}">Opportunities</a>
+
+            <a href="{{ url_for('contact_page') }}" class="get-started-btn">Contact Us</a>
+        </div>
+    </header>
+
+
+
+    <section class="nextora-job-hero-section">
+        <div class="nextora-job-hero-content">
+            <h1 class="nextora-job-hero-heading"><span class="gradient-text">Tennis Practice</span></h1>
+            <div class="nextora-job-hero-container">
+                <p class="nextora-job-hero-para">At Nextora.AI, enhance your tennis skills with focused drills on
+                    serves, volleys, and footwork. Regular practice helps improve agility and precision on the court. 🎾
+                </p>
+            </div>
+
+        </div>
+    </section>
+<div class="nextora-project-btns-container">
+    <a href="{{ url_for('dynamic_page', page_name='tennis-roadmap') }}" class="nextora-btn-option">
+        Roadmap
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='tennis-resources') }}" class="nextora-btn-option">
+        Resources
+    </a>
+    <a href="{{ url_for('dynamic_page', page_name='tennis-project') }}" class="nextora-btn-option">
+        Projects
+    </a>
+</div>
+
+
+    <section class="tennis-project-section">
+        <h2 class="tennis-project-heading">Tennis Practice Ideas</h2>
+        <div class="tennis-project-container">
+
+            <!-- Beginner Level Project -->
+            <div class="tennis-project-card">
+                <h3 class="tennis-project-title">1. Beginner Level – Fundamental Skills and Court Basics</h3>
+                <p class="tennis-project-description">At the beginner stage, players focus on learning the basic
+                    techniques of tennis such as grip styles, forehand, backhand, and serves. The aim is to build muscle
+                    memory and understand court positioning.</p>
+                <div class="tennis-project-tech-stack">
+                    <h4>Practice Stack:</h4>
+                    <p>Tennis racquet, Tennis balls, Training cones, Practice wall or rebound net, Basic fitness
+                        equipment.</p>
+                </div>
+                <div class="tennis-project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Forehand and backhand groundstroke practice</li>
+                        <li>Learning proper grip (Eastern, Continental)</li>
+                        <li>Footwork drills using cones for agility</li>
+                        <li>Basic serving techniques and ball toss consistency</li>
+                        <li>Mini-rallies for control and accuracy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Intermediate Level Project -->
+            <div class="tennis-project-card">
+                <h3 class="tennis-project-title">2. Intermediate Level – Rally Consistency and Match Simulation</h3>
+                <p class="tennis-project-description">At the intermediate level, players refine their strokes, improve
+                    rally consistency, and begin practicing real match strategies. Drills are designed to strengthen
+                    stamina, accuracy, and tactical awareness.</p>
+                <div class="tennis-project-tech-stack">
+                    <h4>Practice Stack:</h4>
+                    <p>Standard tennis racquet, Tennis balls, Full tennis court, Training partner, Agility ladder,
+                        Fitness gear.</p>
+                </div>
+                <div class="tennis-project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Rally drills focusing on depth and placement</li>
+                        <li>Cross-court and down-the-line shot practice</li>
+                        <li>Volleys and net approach techniques</li>
+                        <li>Serve and return consistency training</li>
+                        <li>Small practice matches to apply strategies</li>
+                        <li>Endurance training with sprint intervals</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Advanced Level Project -->
+            <div class="tennis-project-card">
+                <h3 class="tennis-project-title">3. Advanced Level – Competitive Performance and Tactical Play</h3>
+                <p class="tennis-project-description">At the advanced stage, players train at a professional level with
+                    emphasis on advanced stroke techniques, mental toughness, and tactical game play. Practice focuses
+                    on preparing for competitive tournaments.</p>
+                <div class="tennis-project-tech-stack">
+                    <h4>Practice Stack:</h4>
+                    <p>Professional-grade racquet, High-quality tennis balls, Full-size court, Coaching staff, Video
+                        analysis tools, Strength training equipment.</p>
+                </div>
+                <div class="tennis-project-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Advanced serving variations (slice, kick, flat serves)</li>
+                        <li>Aggressive baseline and net play strategies</li>
+                        <li>High-intensity rally and pressure drills</li>
+                        <li>Match simulations under competitive conditions</li>
+                        <li>Tactical awareness of opponent weaknesses</li>
+                        <li>Fitness and mental conditioning for tournaments</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="nextora-footer">
+        <div class="footer-container">
+
+            <div class="footer-col footer-logo">
+                <img src="../static/assets/logo.png" alt="Nextora Logo" class="footer-logo-img">
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../static/assets/facebook-icon.gif"
+                            alt="icon1"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../static/assets/instagram-icon.gif"
+                            alt="icon2"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="../static/assets/linkdin-icon.gif"
+                            alt="icon3"></a>
+                    <a href="https://x.com/" target="_blank"><img src="../static/assets/twitter-icon.gif"
+                            alt="icon4"></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Pages</h3>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#service">Services</a></li>
+                    <li><a href="{{ url_for('contact_page') }}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Explore</h3>
+                <ul>
+                    <li><a href="{{ url_for('journey_page') }}">Career Guide</a></li>
+                    <li><a href="{{ url_for('search_page') }}">Ai Navigator</a></li>
+                    <li><a href="{{ url_for('opportunities_page') }}">Opportunities</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading gradient-text">Get in Touch</h3>
+                <ul>
+                    <li><a href="mailto:support@nextora.ai">support@nextora.ai</a></li>
+                    <li><a href="tel:+923001234567">+92 331 3235413</a></li>
+                    <li><a href="https://www.linkedin.com/in/hamza-shabbir-92b0302a5/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/hamza-ansarii" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span class="gradient-text">Nextora.AI</span> | Developed by <span class="gradient-text">Hamza
+                    Ansari</span></p>
+        </div>
+    </footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
